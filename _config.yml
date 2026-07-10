@@ -1,0 +1,16 @@
+---
+title: Orbit Insights
+author: Andrew
+description: Space tech, SpaceX, and space exploration newsletter
+baseurl: "https://orbitinsights.io"
+permalink: /:year/:month/:day/:title/
+markdown: kramdown
+lsi: true
+exclude: "_data/*"
+
+# GitHub Pages config
+url: https://orbitinsights.io
+exclude: "_data/*"
+
+# Theme config
+theme: jekyll-theme-cayman
