@@ -1,11 +1,9 @@
-# _config.yml
-
 # Site settings
 title: Orbit Insights
 email: ""
-description: "Space, Subcultures & The Future" # Used for Meta description, blog posts, and site RSS feed
-baseurl: "/orbit-insights" # the subpath of your site (e.g. /blog) - no trailing slash
-url: "https://andrew1014.github.io" # the absolute URL of your site - no trailing slash
+description: "Space, Subcultures & The Future"
+baseurl: "/orbit-insights"
+url: "https://andrew1014.github.io"
 twitter_username: ""
 github_username: "andrew1014"
 
@@ -19,15 +17,13 @@ exclude:
 # Minimal Mistakes theme configuration
 remote_theme: mmistakes/minimal-mistakes
 minimal_mistakes_skin: air
+
 defaults:
   - scope:
       type: posts
     values:
       layout: single
-plugins:
-  - jekyll-feed
-  - jekyll-include-cache
-  - jekyll-remote-theme
+
 plugins:
   - jekyll-feed
   - jekyll-include-cache
