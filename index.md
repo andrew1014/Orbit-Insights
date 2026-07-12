@@ -1,3 +1,7 @@
+# index.md
+
+layout: home
+
 # Orbit Insights
 
 **Space, Subcultures & The Future** — Exploring the intersection of space technology, emerging subcultures, and human expansion into the cosmos.
