@@ -1,5 +1,5 @@
 ---
-title: "Orbit Insights"
+title: "Welcome to Orbit Insights!"
 layout: home
 ---
 
