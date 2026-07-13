@@ -1,4 +1,7 @@
-# Welcome to Orbit Insights
+---
+title: "Orbit Insights"
+layout: home
+---
 
 ## Space, Subcultures & The Future
 
