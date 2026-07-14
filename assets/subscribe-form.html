@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Orbit Insights Subscription</title>
+  <style>
+    :root {
+      --dark-bg: #0f0f0f;
+      --accent: #00f2f2;
+      --text: #cccccc;
+      --placeholder: #555;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: var(--dark-bg);
+      font-family: 'Segoe UI', sans-serif;
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .stars {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+    .star {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background: #fff;
+      border-radius: 50%;
+      animation: twinkle 2s infinite alternate;
+    }
+
+    @keyframes twinkle {
+      0% { opacity: 0.1; }
+      100% { opacity: 0.6; }
+    }
+
+    .form-container {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 250, 250, 0.2);
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    .form-container h2 {
+      margin-bottom: 1.5rem;
+      color: var(--accent);
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-bottom: 0.5rem;
+      color: #aaa;
+    }
+
+    input {
+      padding: 0.75rem;
+      border: none;
+      border-radius: 6px;
+      background: #1a1a1a;
+      color: var(--text);
+      font-size: 1rem;
+      transition: 0.2s;
+    }
+
+    input:focus {
+      outline: none;
+      background: #2a2a2a;
+    }
+
+    .form-group::placeholder {
+      color: var(--placeholder);
+    }
+
+    button {
+      padding: 0.75rem;
+      border: none;
+      border-radius: 6px;
+      background: var(--accent);
+      color: #000;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    button:hover {
+      background: #00e6e6;
+    }
+
+    .message {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      text-align: center;
+      padding: 0.5rem;
+      border-radius: 6px;
+    }
+
+    .success {
+      background-color: #00ffcc;
+      color: #000;
+    }
+
+    .error {
+      background-color: #ff6b6b;
+      color: #fff;
+    }
+
+    @media (max-width: 480px) {
+      .form-container {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="stars">
+    <div class="star" style="top: 10%; left: 20%; animation-delay: 0s;"></div>
+    <div class="star" style="top: 20%; left: 70%; animation-delay: 1s;"></div>
+    <div class="star" style="top: 30%; left: 50%; animation-delay: 2s;"></div>
+    <div class="star" style="top: 40%; left: 30%; animation-delay: 3s;"></div>
+    <div class="star" style="top: 50%; left: 70%; animation-delay: 4s;"></div>
+    <div class="star" style="top: 60%; left: 50%; animation-delay: 5s;"></div>
+    <div class="star" style="top: 70%; left: 30%; animation-delay: 6s;"></div>
+    <div class="star" style="top: 80%; left: 70%; animation-delay: 7s;"></div>
+  </div>
+  <div class="form-container">
+    <h2>Join the Mission</h2>
+    <form id="subscribeForm">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+      </div>
+      <button type="submit">Subscribe</button>
+    </form>
+    <div class="message" id="statusMessage"></div>
+  </div>
+  <script>
+    document.getElementById('subscribeForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('statusMessage');
+      
+      // Basic client-side validation
+      if (!name || !email) {
+        showMessage('Please fill in all fields', 'error');
+        return;
+      }
+
+      // Simulate API call
+      fetch('http://localhost:3000/webhook', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ name, email })
+      })
+      .then(response => {
+        if (response.ok) {
+          showMessage('Thank you for joining the mission! 🚀', 'success');
+          document.getElementById('subscribeForm').reset();
+        } else {
+          showMessage('Submission failed. Please try again.', 'error');
+        }
+      })
+      .catch(error => {
+        showMessage('Network error. Please check your connection.', 'error');
+        console.error('Error:', error);
+      });
+    });
+
+    function showMessage(text, type = 'success') {
+      const message = document.getElementById('statusMessage');
+      message.textContent = text;
+      message.className = `message ${type}`;
+      
+      // Automatically hide after 5 seconds
+      setTimeout(() => {
+        message.textContent = '';
+        message.className = 'message';
+      }, 5000);
+    }
+  </script>
+</body>
+</html>
