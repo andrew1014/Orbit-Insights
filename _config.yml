@@ -12,7 +12,6 @@ markdown: kramdown
 permalink: /:year/:month/:day/:title/
 exclude:
   - .sass-cache/
-  - /assets/
 
 # Minimal Mistakes theme configuration
 remote_theme: mmistakes/minimal-mistakes
