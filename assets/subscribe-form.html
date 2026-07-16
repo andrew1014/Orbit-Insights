@@ -174,8 +174,8 @@
         return;
       }
 
-      // Simulate API call
-      fetch('http://localhost:3000/webhook', {
+      // Submit to the subscriber signup endpoint
+      fetch('http://localhost:3000/subscribe', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

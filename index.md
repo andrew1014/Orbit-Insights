@@ -13,7 +13,7 @@ Exploring the intersection of space technology, emerging subcultures, and the fu
 
 ### Subscribe
 
-Newsletter signup coming soon. Check back for updates!
+<iframe src="{{ '/assets/subscribe-form.html' | relative_url }}" title="Subscribe to Orbit Insights" width="100%" height="480" style="border:none; max-width:400px; display:block; margin:0 auto;"></iframe>
 
 ### About the Author
 

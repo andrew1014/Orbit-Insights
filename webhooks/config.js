@@ -1,11 +1,16 @@
 // Config file for MailerLite webhook
 // Place this in /mnt/e/APEX/orbit-insights/webhooks/config.js
 //
-// Replace these values with your MailerLite API credentials
+// Values are pulled from environment variables (see .env / .env.example)
 //
-// API credentials
-export const MAILERLITE_API_KEY = process.env.MAILERLITE_API_KEY;
-export const MAILERLITE_CAMPAIGN_ID = process.env.MAILERLITE_CAMPAIGN_ID;
+const MAILERLITE_API_KEY = process.env.MAILERLITE_API_KEY;
+const MAILERLITE_CAMPAIGN_ID = process.env.MAILERLITE_CAMPAIGN_ID;
+const MAILERLITE_GROUP_ID = process.env.MAILERLITE_GROUP_ID;
+const DEBUG_MODE = process.env.DEBUG_MODE === 'true';
 
-// Optional: Set to true to enable debug logging
-export const DEBUG_MODE = false;
+module.exports = {
+  MAILERLITE_API_KEY,
+  MAILERLITE_CAMPAIGN_ID,
+  MAILERLITE_GROUP_ID,
+  DEBUG_MODE
+};

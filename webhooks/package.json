@@ -1,13 +1,15 @@
 {
   "name": "orbit-insights-webhook",
   "version": "1.0.0",
-  "description": "MailerLite webhook for Orbit Insights content delivery",
+  "description": "MailerLite webhook for Orbit Insights: subscriber signup + campaign send",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
   "dependencies": {
-    "express": "^4.18.2",
-    "axios": "^1.6.2"
+    "axios": "^1.6.2",
+    "cors": "^2.8.6",
+    "dotenv": "^16.6.1",
+    "express": "^4.18.2"
   }
 }
