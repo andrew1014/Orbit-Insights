@@ -2,14 +2,15 @@
 title: Subcultures & Space Tech Convergence
 date: 2026-07-11
 categories: space-tech, subculture
-layout: post
+layout: null
+permalink: /2026/07/11/subculture-space-trends/
 ---
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Subcultures & Space Tech Convergence - Orbit Insights</title>
   <style>
     :root {
       --dark-bg: #0f0f0f;
