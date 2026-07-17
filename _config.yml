@@ -12,13 +12,12 @@ markdown: kramdown
 permalink: /:year/:month/:day/:title/
 exclude:
   - .sass-cache/
-  - _layouts/
 
-# Treat .html files as static content, not processed
-keep_files:
-  - index.html
-  - subscribe.html
+# Minimal Mistakes theme
+remote_theme: mmistakes/minimal-mistakes
+minimal_mistakes_skin: air
 
 plugins:
   - jekyll-feed
   - jekyll-include-cache
+  - jekyll-remote-theme
