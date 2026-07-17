@@ -5,16 +5,6 @@ body {
   color: #e0e0e0 !important;
 }
 
-.page {
-  background: #0f0f0f !important;
-  position: relative;
-  z-index: 1;
-}
-
-.page__content {
-  background: transparent !important;
-}
-
 /* Star background */
 .stars-background {
   position: fixed;
@@ -80,35 +70,6 @@ h1, h2, h3 {
   background-color: #00e6e6 !important;
 }
 
-/* Site header */
-.site-nav {
-  background-color: rgba(15, 15, 15, 0.9) !important;
-  backdrop-filter: blur(10px);
-}
-
-.site-title {
-  color: #00f2f2 !important;
-}
-
-/* Adjust positioning */
-.page {
-  position: relative;
-  z-index: 1;
-}
-
-/* Splash layout */
-.page__hero {
-  background: linear-gradient(135deg, rgba(0, 242, 242, 0.1), rgba(15, 15, 15, 0.95)) !important;
-  position: relative;
-  z-index: 1;
-}
-
-/* Text readability */
-.page__content {
-  z-index: 1;
-  position: relative;
-}
-
 p, li {
   color: #e0e0e0 !important;
 }
@@ -119,4 +80,67 @@ a {
 
 a:hover {
   color: #00e6e6 !important;
+}
+/* Homepage hero section (layout: none) */
+.hero-section {
+  text-align: center;
+  padding: 6rem 2rem 3rem;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: #00f2f2;
+  color: #000 !important;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn-primary:hover {
+  background: #00e6e6;
+}
+
+.btn-secondary {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: 1px solid #00f2f2;
+  color: #00f2f2 !important;
+  border-radius: 6px;
+  text-decoration: none;
+  margin-top: 0.5rem;
+}
+
+.content-section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+blockquote {
+  border-left: 3px solid #00f2f2;
+  padding-left: 1rem;
+  color: #aaa !important;
+  font-style: italic;
+  margin: 1.5rem 0;
+}
+
+hr {
+  border-color: #333;
+  margin: 2rem 0;
 }
