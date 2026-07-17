@@ -13,9 +13,12 @@ permalink: /:year/:month/:day/:title/
 exclude:
   - .sass-cache/
   - _layouts/
-  - "*.html"
+
+# Treat .html files as static content, not processed
+keep_files:
+  - index.html
+  - subscribe.html
 
 plugins:
   - jekyll-feed
   - jekyll-include-cache
-  - jekyll-remote-theme
