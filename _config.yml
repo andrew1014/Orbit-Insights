@@ -13,6 +13,7 @@ permalink: /:year/:month/:day/:title/
 exclude:
   - .sass-cache/
   - _layouts/
+  - "*.html"
 
 plugins:
   - jekyll-feed
