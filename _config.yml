@@ -12,21 +12,7 @@ markdown: kramdown
 permalink: /:year/:month/:day/:title/
 exclude:
   - .sass-cache/
-
-# Minimal Mistakes theme configuration
-remote_theme: mmistakes/minimal-mistakes
-minimal_mistakes_skin: air
-
-defaults:
-  - scope:
-      path: ""
-      type: pages
-    values:
-      layout: custom-home
-  - scope:
-      type: posts
-    values:
-      layout: single
+  - _layouts/
 
 plugins:
   - jekyll-feed
