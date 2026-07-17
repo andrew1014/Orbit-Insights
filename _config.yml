@@ -19,6 +19,11 @@ minimal_mistakes_skin: air
 
 defaults:
   - scope:
+      path: ""
+      type: pages
+    values:
+      layout: custom-home
+  - scope:
       type: posts
     values:
       layout: single

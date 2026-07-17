@@ -1,6 +1,6 @@
 ---
 title: "Welcome to Orbit Insights"
-layout: home
+layout: custom-home
 permalink: /
 ---
 
