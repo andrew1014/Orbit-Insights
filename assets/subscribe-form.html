@@ -42,12 +42,38 @@
       height: 2px;
       background: #fff;
       border-radius: 50%;
-      animation: twinkle 2s infinite alternate;
     }
 
-    @keyframes twinkle {
-      0% { opacity: 0.1; }
-      100% { opacity: 0.6; }
+    .star.slow {
+      animation: twinkle-slow 3s infinite alternate;
+    }
+
+    .star.medium {
+      animation: twinkle-medium 2s infinite alternate;
+    }
+
+    .star.fast {
+      animation: twinkle-fast 1.2s infinite alternate;
+    }
+
+    .star.large {
+      width: 3px;
+      height: 3px;
+    }
+
+    @keyframes twinkle-slow {
+      0% { opacity: 0.15; }
+      100% { opacity: 0.8; }
+    }
+
+    @keyframes twinkle-medium {
+      0% { opacity: 0.2; }
+      100% { opacity: 0.75; }
+    }
+
+    @keyframes twinkle-fast {
+      0% { opacity: 0.25; }
+      100% { opacity: 0.7; }
     }
 
     .form-container {
@@ -137,14 +163,30 @@
 </head>
 <body>
   <div class="stars">
-    <div class="star" style="top: 10%; left: 20%; animation-delay: 0s;"></div>
-    <div class="star" style="top: 20%; left: 70%; animation-delay: 1s;"></div>
-    <div class="star" style="top: 30%; left: 50%; animation-delay: 2s;"></div>
-    <div class="star" style="top: 40%; left: 30%; animation-delay: 3s;"></div>
-    <div class="star" style="top: 50%; left: 70%; animation-delay: 4s;"></div>
-    <div class="star" style="top: 60%; left: 50%; animation-delay: 5s;"></div>
-    <div class="star" style="top: 70%; left: 30%; animation-delay: 6s;"></div>
-    <div class="star" style="top: 80%; left: 70%; animation-delay: 7s;"></div>
+    <!-- Row 1 (10-20% height) -->
+    <div class="star slow" style="top: 10%; left: 5%;"></div>
+    <div class="star fast large" style="top: 15%; left: 25%; animation-delay: 0.5s;"></div>
+    <div class="star medium" style="top: 12%; left: 45%; animation-delay: 1s;"></div>
+    <div class="star slow" style="top: 18%; left: 70%; animation-delay: 1.5s;"></div>
+    <div class="star fast" style="top: 10%; left: 85%; animation-delay: 0.2s;"></div>
+
+    <!-- Row 2 (30-50% height) -->
+    <div class="star medium" style="top: 35%; left: 15%; animation-delay: 2s;"></div>
+    <div class="star slow large" style="top: 40%; left: 35%; animation-delay: 2.5s;"></div>
+    <div class="star fast" style="top: 32%; left: 55%; animation-delay: 1.2s;"></div>
+    <div class="star medium" style="top: 45%; left: 75%; animation-delay: 0.8s;"></div>
+    <div class="star slow" style="top: 38%; left: 90%; animation-delay: 3s;"></div>
+
+    <!-- Row 3 (60-80% height) -->
+    <div class="star fast" style="top: 62%; left: 10%; animation-delay: 1.8s;"></div>
+    <div class="star medium" style="top: 70%; left: 30%; animation-delay: 2.2s;"></div>
+    <div class="star slow large" style="top: 65%; left: 50%; animation-delay: 3.5s;"></div>
+    <div class="star fast" style="top: 75%; left: 68%; animation-delay: 0.6s;"></div>
+    <div class="star medium" style="top: 60%; left: 85%; animation-delay: 1.4s;"></div>
+
+    <!-- Row 4 (85%+ height) -->
+    <div class="star slow" style="top: 88%; left: 20%; animation-delay: 2.8s;"></div>
+    <div class="star fast large" style="top: 90%; left: 75%; animation-delay: 0.9s;"></div>
   </div>
   <div class="form-container">
     <h2>Join the Mission</h2>
