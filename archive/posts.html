@@ -1,13 +1,13 @@
 ---
 layout: none
-permalink: /
+permalink: /archive/
 ---
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Orbit Insights</title>
+  <title>All Posts — Orbit Insights</title>
   <style>
     :root {
       --dark-bg: #0f0f0f;
@@ -33,21 +33,14 @@ permalink: /
 
     .container { position: relative; z-index: 1; max-width: 800px; margin: 0 auto; padding: 2rem; }
 
-    .hero { text-align: center; padding: 5rem 2rem 3rem; position: relative; z-index: 1; }
-    .hero h1 { font-size: 2.5rem; color: var(--accent); text-shadow: 0 0 10px rgba(0,242,242,0.3); margin-bottom: 1rem; }
-    .hero p { font-size: 1.1rem; color: var(--text-muted); max-width: 600px; margin: 0 auto 2rem; }
+    .page-header { text-align: center; padding: 4rem 2rem 2rem; position: relative; z-index: 1; }
+    .page-header h1 { font-size: 2rem; color: var(--accent); text-shadow: 0 0 10px rgba(0,242,242,0.3); margin-bottom: 0.5rem; }
+    .page-header p { color: var(--text-muted); font-size: 1rem; }
 
-    .btn-primary { display: inline-block; padding: 0.75rem 1.5rem; background: var(--accent); color: #000; border-radius: 6px; text-decoration: none; font-weight: bold; transition: background 0.2s; }
-    .btn-primary:hover { background: var(--accent-light); color: #000; }
+    .back-link { display: inline-flex; align-items: center; gap: 0.4rem; color: var(--accent); text-decoration: none; font-size: 0.9rem; margin-bottom: 2rem; transition: color 0.2s; }
+    .back-link:hover { color: var(--accent-light); }
 
-    h2 { font-size: 1.5rem; color: var(--accent); margin: 2rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border); }
-    h3 { font-size: 1.2rem; color: var(--accent-light); margin: 1.5rem 0 0.75rem; }
-    p { margin-bottom: 1rem; }
-    a { color: var(--accent); text-decoration: none; transition: color 0.2s; }
-    a:hover { color: var(--accent-light); }
-
-    .btn-secondary { display: inline-block; padding: 0.5rem 1rem; border: 1px solid var(--accent); color: var(--accent); border-radius: 6px; text-decoration: none; margin-top: 0.5rem; transition: all 0.2s; }
-    .btn-secondary:hover { background: rgba(0,242,242,0.1); color: var(--accent-light); }
+    h2 { font-size: 1rem; color: var(--text-muted); margin: 2rem 0 1rem; text-transform: uppercase; letter-spacing: 0.1em; }
 
     .post-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem 1.5rem; margin-bottom: 1rem; transition: border-color 0.2s; }
     .post-card:hover { border-color: var(--accent); }
@@ -55,16 +48,13 @@ permalink: /
     .post-card h3 { margin: 0 0 0.5rem; font-size: 1.05rem; color: var(--accent-light); }
     .post-card p { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.75rem; }
 
-    .featured-badge { display: inline-block; font-size: 0.7rem; background: var(--accent); color: #000; font-weight: bold; padding: 0.15rem 0.5rem; border-radius: 4px; margin-bottom: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; }
-
-    .posts-link { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--accent); font-size: 0.95rem; text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.2s; }
-    .posts-link:hover { border-bottom-color: var(--accent); color: var(--accent-light); }
-
-    hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
-    blockquote { border-left: 3px solid var(--accent); padding-left: 1rem; color: var(--text-muted); font-style: italic; margin: 1.5rem 0; }
+    .btn-secondary { display: inline-block; padding: 0.4rem 0.9rem; border: 1px solid var(--accent); color: var(--accent); border-radius: 6px; text-decoration: none; font-size: 0.85rem; transition: all 0.2s; }
+    .btn-secondary:hover { background: rgba(0,242,242,0.1); color: var(--accent-light); }
 
     footer { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border); text-align: center; color: var(--text-muted); font-size: 0.9rem; }
-    @media (max-width: 768px) { .hero h1 { font-size: 1.8rem; } .container { padding: 1rem; } }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { color: var(--accent-light); }
+    @media (max-width: 768px) { .page-header h1 { font-size: 1.6rem; } .container { padding: 1rem; } }
   </style>
 </head>
 <body>
@@ -89,37 +79,34 @@ permalink: /
     <div class="star fast large" style="top: 90%; left: 75%; animation-delay: 0.9s;"></div>
   </div>
 
-  <div class="hero">
-    <h1>⚡ Orbit Insights</h1>
-    <p>Exploring space technology, emerging subcultures, and the future of human expansion</p>
-    <a href="/Orbit-Insights/subscribe" class="btn-primary">Join the Mission 🚀</a>
+  <div class="page-header">
+    <h1>🛸 The Archive</h1>
+    <p>Every transmission from the cosmos, in order.</p>
   </div>
 
   <div class="container">
+    <a href="/Orbit-Insights/" class="back-link">← Back to Orbit Insights</a>
 
-    <h2>Latest from the Cosmos</h2>
+    <h2>📡 2026</h2>
 
     <div class="post-card">
-      <div class="featured-badge">✨ Latest Post</div>
-      <div class="post-date">📅 July 18, 2026</div>
+      <div class="post-date">July 18, 2026</div>
       <h3>🎮 Why the Next Generation of Astronauts Will Come From Gaming</h3>
-      <p>NASA and SpaceX aren't looking for perfect resumes anymore. They're recruiting from Discord servers, esports communities, and Kerbal Space Program forums. Here's why gaming subculture is the real talent pipeline for space.</p>
-      <a href="/Orbit-Insights/2026/07/18/astronauts-from-gaming/" class="btn-secondary">Read Full Article →</a>
+      <p>NASA and SpaceX aren't looking for perfect resumes anymore. They're recruiting from Discord servers, esports communities, and Kerbal Space Program forums.</p>
+      <a href="/Orbit-Insights/2026/07/18/astronauts-from-gaming/" class="btn-secondary">Read →</a>
     </div>
 
-    <a href="/Orbit-Insights/archive/" class="posts-link">🛸 View all posts from the archive →</a>
-
-    <hr>
-
-    <h2>🛰️ About This Mission</h2>
-    <p>Orbit Insights is a deep dive into where space technology and emerging digital culture collide. We track the trends reshaping civilization — from SpaceX breakthroughs to underground digital movements — and reveal the patterns most are missing.</p>
-    <p>Curated by <strong>Andrew</strong>, an AI engineer obsessed with the future of space, technology, and human expansion.</p>
-    <blockquote>"The best way to predict the future is to create it." — Peter Drucker</blockquote>
+    <div class="post-card">
+      <div class="post-date">July 11, 2026</div>
+      <h3>🚀 Subcultures & Space Tech Convergence</h3>
+      <p>How digital subcultures mirror and accelerate space tech innovation — from cyberpunk aesthetics to 2025's Digital Underground.</p>
+      <a href="/Orbit-Insights/2026/07/11/subculture-space-trends/" class="btn-secondary">Read →</a>
+    </div>
 
     <footer>
       <p>© 2026 <a href="/Orbit-Insights/">Orbit Insights</a>. Exploring the cosmos, one insight at a time.</p>
     </footer>
-
   </div>
+
 </body>
 </html>
