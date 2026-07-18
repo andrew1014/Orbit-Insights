@@ -1,5 +1,5 @@
 // Express server for handling Orbit Insights webhook requests
-// Place this in /mnt/e/APEX/orbit-insights/webhooks/index.js
+// Place this in /mnt/e/APEX/webhooks/index.js
 //
 // Two responsibilities:
 // 1. POST /subscribe  -> adds a new subscriber (name/email) to a MailerLite group

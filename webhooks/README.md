@@ -4,7 +4,7 @@
 1. Copy the contents of `subscribe-form.html` into your webpage
 2. Replace the webhook URL with your production endpoint
 3. Customize colors/styles to match your site's branding
-4. Add to your homepage (e.g., in `/mnt/e/APEX/Orbit-Insights/_posts/index.md`)
+4. Add to your homepage (e.g., in `/mnt/e/APEX/_posts/index.md`)
 
 ### Customization Tips
 - Modify the CSS variables in `:root` for different color schemes

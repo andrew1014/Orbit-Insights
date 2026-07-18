@@ -1,5 +1,5 @@
 // Config file for MailerLite webhook
-// Place this in /mnt/e/APEX/orbit-insights/webhooks/config.js
+// Place this in /mnt/e/APEX/webhooks/config.js
 //
 // Values are pulled from environment variables (see .env / .env.example)
 //
