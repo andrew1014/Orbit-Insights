@@ -1,0 +1,253 @@
+---
+layout: none
+permalink: /subscribe
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Join the Mission | Orbit Insights</title>
+  <meta name="description" content="Subscribe to Orbit Insights — weekly dispatches on space tech and emerging subcultures by Marcus Chen.">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2344216347901564" crossorigin="anonymous"></script>
+  <style>
+    :root {
+      --dark-bg: #0f0f0f;
+      --accent: #00f2f2;
+      --accent-light: #00e6e6;
+      --text: #e0e0e0;
+      --text-muted: #aaaaaa;
+      --border: #2a3f5f;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: var(--dark-bg);
+      font-family: 'Segoe UI', sans-serif;
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .stars { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; }
+    .star { position: absolute; width: 2px; height: 2px; background: #fff; border-radius: 50%; }
+    .star.slow { animation: twinkle-slow 3s infinite alternate; }
+    .star.medium { animation: twinkle-medium 2s infinite alternate; }
+    .star.fast { animation: twinkle-fast 1.2s infinite alternate; }
+    .star.large { width: 3px; height: 3px; }
+    @keyframes twinkle-slow { 0% { opacity: 0.15; } 100% { opacity: 0.8; } }
+    @keyframes twinkle-medium { 0% { opacity: 0.2; } 100% { opacity: 0.75; } }
+    @keyframes twinkle-fast { 0% { opacity: 0.25; } 100% { opacity: 0.7; } }
+
+    .back-link {
+      position: absolute;
+      top: 2rem;
+      left: 2rem;
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.9rem;
+      z-index: 1;
+      transition: color 0.2s;
+    }
+    .back-link:hover { color: var(--accent-light); }
+
+    .form-container {
+      position: relative;
+      z-index: 1;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--border);
+      padding: 2.5rem;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,242,242,0.15);
+      width: 100%;
+      max-width: 420px;
+      text-align: center;
+      margin: 1rem;
+    }
+
+    .form-container h2 {
+      margin-bottom: 0.5rem;
+      color: var(--accent);
+      font-size: 1.6rem;
+      text-shadow: 0 0 10px rgba(0,242,242,0.3);
+    }
+
+    .form-container p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-bottom: 2rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+    }
+
+    label {
+      margin-bottom: 0.4rem;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    input {
+      padding: 0.75rem;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: #1a1a1a;
+      color: var(--text);
+      font-size: 1rem;
+      transition: border-color 0.2s;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: var(--accent);
+      background: #1f1f1f;
+    }
+
+    button {
+      width: 100%;
+      padding: 0.85rem;
+      border: none;
+      border-radius: 6px;
+      background: var(--accent);
+      color: #000;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.2s, opacity 0.2s;
+      margin-top: 0.5rem;
+    }
+
+    button:hover:not(:disabled) { background: var(--accent-light); }
+    button:disabled { opacity: 0.7; cursor: not-allowed; }
+
+    .message {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      padding: 0.6rem 1rem;
+      border-radius: 6px;
+      display: none;
+    }
+
+    .message.show { display: block; }
+    .success { background-color: rgba(0,255,204,0.15); border: 1px solid #00ffcc; color: #00ffcc; }
+    .error { background-color: rgba(255,107,107,0.15); border: 1px solid #ff6b6b; color: #ff6b6b; }
+
+    .loading-text { font-size: 0.85rem; color: var(--text-muted); margin-top: 0.75rem; display: none; }
+    .loading-text.show { display: block; }
+
+    @media (max-width: 480px) {
+      .form-container { padding: 1.5rem; }
+      .back-link { top: 1rem; left: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <a href="/" class="back-link">← Back to Orbit Insights</a>
+
+  <div class="stars">
+    <div class="star slow" style="top: 10%; left: 5%;"></div>
+    <div class="star fast large" style="top: 15%; left: 25%; animation-delay: 0.5s;"></div>
+    <div class="star medium" style="top: 12%; left: 45%; animation-delay: 1s;"></div>
+    <div class="star slow" style="top: 18%; left: 70%; animation-delay: 1.5s;"></div>
+    <div class="star fast" style="top: 10%; left: 85%; animation-delay: 0.2s;"></div>
+    <div class="star medium" style="top: 35%; left: 15%; animation-delay: 2s;"></div>
+    <div class="star slow large" style="top: 40%; left: 35%; animation-delay: 2.5s;"></div>
+    <div class="star fast" style="top: 32%; left: 55%; animation-delay: 1.2s;"></div>
+    <div class="star medium" style="top: 45%; left: 75%; animation-delay: 0.8s;"></div>
+    <div class="star slow" style="top: 38%; left: 90%; animation-delay: 3s;"></div>
+    <div class="star fast" style="top: 62%; left: 10%; animation-delay: 1.8s;"></div>
+    <div class="star medium" style="top: 70%; left: 30%; animation-delay: 2.2s;"></div>
+    <div class="star slow large" style="top: 65%; left: 50%; animation-delay: 3.5s;"></div>
+    <div class="star fast" style="top: 75%; left: 68%; animation-delay: 0.6s;"></div>
+    <div class="star medium" style="top: 60%; left: 85%; animation-delay: 1.4s;"></div>
+    <div class="star slow" style="top: 88%; left: 20%; animation-delay: 2.8s;"></div>
+    <div class="star fast large" style="top: 90%; left: 75%; animation-delay: 0.9s;"></div>
+  </div>
+
+  <div class="form-container">
+    <h2>Join the Mission</h2>
+    <p>Weekly dispatches on space tech and subcultures — before the mainstream catches on.</p>
+    <form id="subscribeForm">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+      </div>
+      <button type="submit" id="submitBtn">Subscribe 🚀</button>
+      <p class="loading-text" id="loadingText">🛰️ Transmitting to mission control...</p>
+    </form>
+    <div class="message" id="statusMessage"></div>
+  </div>
+
+  <script>
+    document.getElementById('subscribeForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const btn = document.getElementById('submitBtn');
+      const loadingText = document.getElementById('loadingText');
+
+      if (!name || !email) {
+        showMessage('Please fill in all fields.', 'error');
+        return;
+      }
+
+      // Immediately show loading state
+      btn.disabled = true;
+      btn.textContent = 'Launching...';
+      loadingText.classList.add('show');
+      hideMessage();
+
+      fetch('https://orbit-insights-webhook.onrender.com/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email })
+      })
+      .then(response => {
+        loadingText.classList.remove('show');
+        if (response.ok) {
+          showMessage('🚀 You\'re in! First transmission coming Friday.', 'success');
+          document.getElementById('subscribeForm').reset();
+        } else {
+          showMessage('Something went wrong. Please try again.', 'error');
+        }
+      })
+      .catch(() => {
+        loadingText.classList.remove('show');
+        showMessage('Network error. Please check your connection.', 'error');
+      })
+      .finally(() => {
+        btn.disabled = false;
+        btn.textContent = 'Subscribe 🚀';
+      });
+    });
+
+    function showMessage(text, type) {
+      const msg = document.getElementById('statusMessage');
+      msg.textContent = text;
+      msg.className = 'message show ' + type;
+      setTimeout(() => {
+        msg.className = 'message';
+      }, 6000);
+    }
+
+    function hideMessage() {
+      document.getElementById('statusMessage').className = 'message';
+    }
+  </script>
+</body>
+</html>
