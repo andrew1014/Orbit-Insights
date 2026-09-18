@@ -214,6 +214,43 @@ permalink: /2026/09/18/orbit-is-the-easy-part/
         gap: 0.5rem;
       }
     }
+  
+    /* --- article media, collapsible depth, and poll --- */
+    figure { margin: 2.2rem 0; }
+    figure img { width: 100%; height: auto; display: block; border-radius: 10px;
+                 border: 1px solid var(--border); }
+    figcaption { font-size: 0.82rem; color: var(--text-muted); margin-top: 0.6rem;
+                 line-height: 1.5; }
+    figcaption a { color: var(--accent); text-decoration: none; }
+    .flight-card { background: var(--card-bg); border: 1px solid var(--border);
+                   border-radius: 10px; padding: 1.2rem 1.4rem; margin: 1.8rem 0; }
+    .flight-card ul { margin: 0; padding-left: 1.1rem; }
+    .flight-card li { margin-bottom: 0.55rem; }
+    details { background: var(--card-bg); border: 1px solid var(--border);
+              border-radius: 10px; padding: 0.9rem 1.2rem; margin: 1.1rem 0; }
+    details summary { cursor: pointer; font-weight: 600; color: var(--accent);
+                      list-style: none; }
+    details summary::-webkit-details-marker { display: none; }
+    details summary:before { content: "▸ "; }
+    details[open] summary:before { content: "▾ "; }
+    details p { margin-top: 0.9rem; }
+    .poll { background: var(--card-bg); border: 1px solid var(--accent);
+            border-radius: 12px; padding: 1.4rem 1.5rem; margin: 2.4rem 0; }
+    .poll h3 { margin: 0 0 0.4rem; color: var(--accent); font-size: 1.15rem; }
+    .poll-sub { font-size: 0.9rem; color: var(--text-muted); margin: 0 0 1.1rem; }
+    .poll-btn { display: block; width: 100%; text-align: left; margin-bottom: 0.55rem;
+                padding: 0.7rem 1rem; background: #0d0d1f; color: var(--text);
+                border: 1px solid var(--border); border-radius: 8px;
+                font-size: 0.95rem; cursor: pointer; font-family: inherit;
+                transition: border-color 0.15s, background 0.15s; }
+    .poll-btn:hover { border-color: var(--accent); }
+    .poll-btn:disabled { cursor: default; opacity: 0.75; }
+    .poll-row { margin-bottom: 0.7rem; font-size: 0.92rem; }
+    .poll-bar { height: 9px; background: #0d0d1f; border-radius: 5px;
+                overflow: hidden; margin-top: 0.3rem; }
+    .poll-fill { height: 100%; background: var(--accent); width: 0; }
+    .poll-note { font-size: 0.82rem; color: var(--text-muted); margin: 0.9rem 0 0; }
+    .poll-mine { color: var(--accent); font-weight: 600; }
   </style>
 </head>
 <body>
@@ -253,163 +290,207 @@ permalink: /2026/09/18/orbit-is-the-easy-part/
 
     <div class="content">
       <p style="font-size: 1.1rem; font-style: italic; color: var(--text-muted); margin-bottom: 2rem;">
-        On Monday, if the weather and the FAA cooperate, Starship will finally go to orbit and stay there for a few hours. The detail I can't stop thinking about is smaller than a dinner plate: two ceramic tiles, pried off a rocket that spent 24 days floating in the Indian Ocean, are scheduled to fly again.
+        On Monday, if the weather and the FAA cooperate, Starship will finally go to orbit and stay there. The detail I can't stop thinking about is smaller than a dinner plate: two ceramic tiles, pried off a rocket that spent 24 days floating in the Indian Ocean, are scheduled to fly again.
       </p>
 
-      <h2>What's Actually Happening on September 28</h2>
+      <figure>
+        <img src="/assets/images/2026-09-18/tile-inspection-web.jpg" alt="A Starship vehicle's heat shield side under inspection at Starbase, showing the black hexagonal tile grid">
+        <figcaption>A Starship's heat-shield side at Starbase. Roughly 18,000 tiles, every one of them inspected between flights. <a href="https://commons.wikimedia.org/wiki/File:Starship_SN20_getting_a_tile_inspection.jpg">Wikimedia Commons</a>, CC BY-SA 2.0</figcaption>
+      </figure>
 
-      <p>
-        SpaceX announced on Tuesday, September 15 that it was targeting September 22 for Flight 14 — the first Starship mission that will attempt to reach orbit rather than arc up and fall back down. On Thursday it moved the date to <strong>Monday, September 28</strong>, still pending regulatory approval, with a 75-minute window opening at 7:15 a.m. Central.
-      </p>
+      <h2>The short version</h2>
 
-      <p>
-        Here's the shape of it. The booster, Booster 21, does its normal thing: ascent, stage separation, boostback, then a controlled splashdown in the Gulf of Mexico about seven minutes in. No tower catch for the booster this time, and no catch for the ship either.
-      </p>
-
-      <p>
-        The upper stage, Ship 41, is the part that's different. It lights its vacuum Raptors after separation, reaches orbital velocity — about <strong>7.8 kilometers per second</strong> — and settles into a roughly <strong>275-kilometer orbit</strong>. Then it coasts. Six revolutions of the planet over a mission that runs close to <strong>10 hours</strong>, before a deorbit burn and a splashdown in the Pacific west of Chile.
-      </p>
-
-      <p>
-        Along the way it deploys <strong>26 Starlink V3 satellites</strong>. Those are the big ones: about 2,000 kilograms each, too bulky to launch in useful numbers inside a Falcon 9 fairing. SpaceX says the V3 generation carries more than ten times the per-satellite capacity of the V2 Minis that make up most of the constellation today, which is why the company wants up to 100,000 of them eventually. On Flight 13 in July, Starship also deployed V3 satellites — but on a suborbital arc, which meant they fell back into the atmosphere and burned up about 20 minutes later. This time, they stay.
-      </p>
-
-      <p>
-        SpaceX's own framing: "By going to orbit, the next phase of developing Starship to be fully and rapidly reusable can begin."
-      </p>
-
-      <h2>Thirteen Flights of Deliberately Not Going to Orbit</h2>
-
-      <p>
-        That sentence deserves a second read, because it contains the honest version of this story.
-      </p>
-
-      <p>
-        Every Starship flight since April 2023 — thirteen of them — has flown what SpaceX calls a "passively safe suborbital trajectory." That's real safety language and I don't want to dismiss it. But it also describes a rehearsal that avoided the hardest scene. Going up is math and engines, and SpaceX has been very good at both for a long time. Coming back from orbital velocity, at roughly Mach 25, is a materials problem. And materials problems don't care how good your software is.
-      </p>
-
-      <p>
-        So the milestone everyone will watch on Monday — orbit — is genuinely a first. It's also the setup for the thing that actually decides whether Starship becomes what SpaceX says it will become.
-      </p>
-
-      <div class="highlight-box">
-        <strong>Here's the thesis:</strong> orbit is a checkbox. The belly is the product. Roughly 18,000 ceramic tiles on one side of the ship are the difference between a rocket that flies again in weeks and a rocket that flies again in months. That's the whole business model, and it's the part nobody puts in the thumbnail.
+      <div class="flight-card">
+        <ul>
+          <li><strong>What:</strong> Flight 14 — the first Starship mission that attempts to reach orbit rather than arc up and fall back down.</li>
+          <li><strong>When:</strong> Monday, September 28. A 75-minute window from 7:15 a.m. Central, pending FAA approval.</li>
+          <li><strong>Ship 41:</strong> lights its vacuum Raptors, reaches about <strong>7.8 km/s</strong>, settles into a <strong>~275 km orbit</strong>, coasts six laps over roughly <strong>10 hours</strong>, then deorbits and splashes down in the Pacific west of Chile.</li>
+          <li><strong>Booster 21:</strong> no tower catch this time. Splashdown in the Gulf about seven minutes in.</li>
+          <li><strong>Payload:</strong> 26 Starlink V3 satellites, about 2,000 kg each. On Flight 13 they deployed on a suborbital arc and burned up 20 minutes later. This time they stay.</li>
+        </ul>
       </div>
 
-      <h2>What the Last Ship Looked Like When It Came Back</h2>
+      <div class="highlight-box">
+        <strong>Here's the thesis:</strong> orbit is a checkbox. The belly is the product. Thirteen flights since April 2023 have all flown what SpaceX calls a "passively safe suborbital trajectory" — a rehearsal that skipped the hardest scene. Going up is math and engines. Coming back at Mach 25 is a materials problem, and materials problems don't care how good your software is.
+      </div>
+
+      <figure>
+        <img src="/assets/images/2026-09-18/reentry-plasma-web.jpg" alt="Glowing plasma seen through a spacecraft window during reentry, with the Earth's curved horizon">
+        <figcaption>Reentry heating, from inside: plasma over the window during Orion's first flight test, December 2014. Starship's ship meets the same physics at roughly Mach 25. <a href="https://images.nasa.gov/details/jsc2022e046313">NASA</a>, public domain</figcaption>
+      </figure>
+
+      <h2>What came back from Flight 13</h2>
 
       <p>
-        Flight 13, on July 24, was the good one. The ship survived reentry, executed a landing flip, splashed down in the Indian Ocean, and — a first — stayed intact and operational after tipping over. It drifted for weeks. Recovery crews towed it toward Christmas Island in mid-August, engineers took heat shield samples, and on August 26 it was loaded onto a heavy-lift ship for the ride back to Texas.
+        Flight 13, on July 24, was the good one. The ship survived reentry, flipped, splashed down in the Indian Ocean and — a first — stayed intact after tipping over. Recovery crews towed it toward Christmas Island, engineers took heat shield samples, and on August 26 it was loaded onto a heavy-lift ship for the ride back to Texas.
       </p>
 
       <p>
-        That gave everyone the thing the program had never had: <strong>a flown heat shield, on the ground, up close.</strong>
+        That gave the program the thing it had never had: <strong>a flown heat shield, on the ground, up close.</strong>
       </p>
 
       <p>
-        The drone footage showed only a few tiles missing, which is genuinely good news. It also showed <strong>white streaks across the shield, all of them starting at the boundaries between tiles</strong>, plus cracked tiles and broken edges. Read that plainly: hot gas found the gaps.
+        The drone footage showed only a few tiles missing, which is genuinely good news. It also showed <strong>white streaks across the shield, every one of them starting at the boundary between tiles</strong>, plus cracked tiles and broken edges. Read that plainly: hot gas found the gaps.
       </p>
 
       <p>
-        Dan Rasky, a former NASA engineer who spent nearly four decades on heat shield materials at Ames and co-invented the material used on Crew Dragon's shield, put it bluntly to Ars Technica: "Starship's current thermal protection system is a dead-end for all missions that require full and rapid reusability."
+        Dan Rasky, who spent nearly four decades on heat shield materials at NASA Ames and co-invented the material on Crew Dragon's shield, told Ars Technica: <em>"Starship's current thermal protection system is a dead-end for all missions that require full and rapid reusability."</em>
       </p>
 
-      <p>
-        He and two other former NASA hands — astronaut Charles Camarda and Charles Miller, who ran NASA's transition team — published an analysis arguing that SpaceX's approach is a real improvement on the Space Shuttle's tiles but built on the same fundamental idea. The Shuttle's tiles worked. What never worked was the turnaround: every tile needed inspection, and inspection is what killed rapid reuse.
-      </p>
+      <details>
+        <summary>Why the Shuttle already proved tiles can work — and still failed</summary>
+        <p>
+          Rasky and two other former NASA hands — astronaut Charles Camarda and Charles Miller, who ran NASA's transition team — published an analysis arguing SpaceX's approach is a real improvement on the Shuttle's tiles, but built on the same fundamental idea. The Shuttle's tiles worked. What never worked was the turnaround: every tile needed inspection, and inspection is what killed rapid reuse.
+        </p>
+      </details>
+
+      <details>
+        <summary>What SpaceX is actually trying</summary>
+        <p>
+          To be fair to SpaceX, they aren't pretending otherwise. Musk has called a reusable heat shield "the biggest problem that remains" for Starship, and said the company can't get where it's going with laborious inspection of the whole shield between flights. They've added retention hardware to the highest-risk tiles, opened flow paths that let plasma sneak behind tiles rather than force its way through, and are testing a curved tile design that reduces heating in the gaps.
+        </p>
+      </details>
+
+      <h2>Two tiles, out of eighteen thousand</h2>
 
       <p>
-        To be fair to SpaceX, they're not pretending otherwise. Elon Musk has called a reusable heat shield "the biggest problem that remains" for Starship, and said the company can't get where it's going with laborious inspection of the whole shield between flights. The company has added retention hardware to the highest-risk tiles, opened up flow paths that let plasma sneak behind tiles, and is testing a curved tile design that reduces heating in the gaps.
-      </p>
-
-      <h2>The Two Tiles</h2>
-
-      <p>
-        Which brings me back to the detail I opened with. Two tiles recovered from Ship 40 will fly again on Ship 41. It's the first time SpaceX has reused a heat shield tile on Starship.
-      </p>
-
-      <p>
-        Two. Out of roughly eighteen thousand.
+        Two tiles recovered from Ship 40 will fly again on Ship 41. It's the first time SpaceX has reused a heat shield tile on Starship. Two. Out of roughly eighteen thousand.
       </p>
 
       <p>
         I love this, and not as a joke about how small it is. Reusability doesn't start as a policy or a press release. It starts as a number you can count on one hand. The first Falcon 9 booster to fly twice was a stunt. The first tile to fly twice is the same kind of stunt, and it's the only kind that ever turns into an industry.
       </p>
 
-      <h2>Three Satellites Flying Backwards to Look at the Belly</h2>
+      <details>
+        <summary>The people who collect the tiles (yes, really)</summary>
+        <p>
+          For about two years, the people tracking Starship's heat shield most obsessively weren't engineers. They were enthusiasts comparing tile-loss photos flight over flight, arguing about gap fillers in forum threads, and walking the beaches to collect the tiles that fell off.
+        </p>
+        <p>
+          The tiles float. That's the whole reason the hobby exists. After the first integrated flight in April 2023, Joe Tegtmeyer found half a tile on South Padre Island, about seven miles from the pad, hours after launch — he geolocated it, told SpaceX, and they thanked him and let him keep it. A 2024 profile in the San Antonio Express-News followed Ron Parker, who made eleven trips driving Mexican beaches, found about 120 intact tiles and hundreds of fragments, and sold the best ones on eBay, where listings have run from under a dollar for a shard to several hundred for a whole one. SpaceX runs a debris hotline for exactly this, and under the Outer Space Treaty the debris is still SpaceX's property even after it washes up on a beach.
+        </p>
+        <p>
+          Easy to file under "space nerds being space nerds." I think it's the opposite. <strong>People fixate on the part that reveals the real constraint.</strong> Nobody collects launch pad concrete. They collect the tiles, because the tiles are where the hard problem lives — and because a tile is the only piece of a rocket you can hold in your hand. Now the mission has three camera-equipped satellites pointed at them. The obsession became a requirement.
+        </p>
+      </details>
 
-      <p>
-        Here's the part that made me put my coffee down.
-      </p>
+      <div class="poll" id="poll">
+        <h3>What's actually the hard part?</h3>
+        <p class="poll-sub">Four candidates. Pick the one you think decides whether Starship becomes what SpaceX says it will.</p>
+        <div id="pollOpts"></div>
+        <div id="pollResults" class="poll-results" hidden></div>
+        <p class="poll-note" id="pollNote">One vote per reader, counted live.</p>
+      </div>
 
-      <p>
-        Three of the 26 Starlink satellites on Flight 14 have been fitted with cameras aimed back at the ship's heat shield. After deployment, they'll photograph the tiles — during and after the coast phase — and send the imagery home so SpaceX can study how the shield is holding up in orbit. Flight 13 did something similar with six camera-equipped satellites inspecting the ship, borrowing a page from the Shuttle's rendezvous pitch maneuver.
-      </p>
-
-      <p>
-        Which means the least glamorous hardware on the most powerful rocket ever built now has its own dedicated imaging mission. The heat shield got a camera crew.
-      </p>
-
-      <p>
-        If you've been reading this newsletter for a while, you know why that lands for me. For about two years, the people tracking Starship's heat shield most obsessively weren't engineers. They were enthusiasts comparing tile-loss photos flight over flight, arguing about gap fillers in forum threads, and — I'm not making this up — <strong>walking the beaches to collect the tiles that fell off.</strong>
-      </p>
-
-      <p>
-        The tiles float. That's the whole reason this hobby exists. After the first integrated flight in April 2023, Joe Tegtmeyer found half a tile on South Padre Island, about seven miles from the pad, hours after launch. He geolocated it and told SpaceX, and they thanked him and let him keep it. A 2024 profile in the San Antonio Express-News followed Ron Parker, who made eleven trips driving Mexican beaches looking for the things, found about 120 intact tiles and hundreds of fragments, and sold the best ones on eBay — where listings have run from under a dollar for a shard to several hundred for a whole one. SpaceX runs a debris hotline (1-866-623-0234, recovery@spacex.com) for exactly this. Under the Outer Space Treaty, the debris is still SpaceX's property even after it washes up on a beach.
-      </p>
-
-      <p>
-        It's easy to file that under "space nerds being space nerds." I think it's the opposite. <strong>People fixate on the part that reveals the real constraint.</strong> Nobody collects launch pad concrete. They collect the tiles, because the tiles are where the hard problem lives, and because a tile is the only piece of a rocket you can hold in your hand.
-      </p>
-
-      <p>
-        And now the mission has three satellites pointed at them. The obsession became a requirement. That's how this always goes: the edge figures out what matters first, and the institution catches up with a camera.
-      </p>
-
-      <h2>What to Actually Watch on Monday</h2>
-
-      <p>
-        If you tune in, watch three things and ignore the rest.
-      </p>
+      <h2>What to watch on Monday</h2>
 
       <ul>
-        <li><strong>Did the orbital insertion burn happen at all?</strong> The whole flight plan hinges on the ship being healthy enough after stage separation for the team to commit to it. Watch for confirmation that the burn happened, not just that the ship is in space.</li>
-        <li><strong>Do the satellites actually reach their orbit?</strong> Deployment is one thing. Twenty-six satellites using their own thrusters to climb to 275 kilometers and join the constellation is another. That's the part that turns a test flight into revenue.</li>
-        <li><strong>And then, weeks from now, the tiles.</strong> Not the streaks — the boundaries. If the gaps hold, that's the real headline, and it won't be the one on Monday.</li>
+        <li><strong>Did the orbital insertion burn happen at all?</strong> The whole flight plan hinges on the ship being healthy enough after separation for the team to commit to it. Watch for confirmation of the burn, not just that the ship is in space.</li>
+        <li><strong>Do the satellites reach their orbit?</strong> Deployment is one thing; 26 satellites climbing to 275 km on their own thrusters is another. That's what turns a test flight into revenue.</li>
+        <li><strong>And weeks from now, the tiles.</strong> Not the streaks — the boundaries. If the gaps hold, that's the real headline, and it won't be the one on Monday.</li>
       </ul>
 
       <p>
-        One more specific thing to watch: the booster. On Flight 13, three of Booster 20's center engines clogged with ice during the landing burn, leaving only 8 of 13 engines lit and turning the splashdown into a hard one. Booster 21 has new filtration hardware and relight software. If it lands soft, that sets up a booster catch on the next flight.
+        One more: the booster. On Flight 13, three of Booster 20's centre engines clogged with ice during the landing burn, leaving only 8 of 13 lit and turning the splashdown into a hard one. Booster 21 has new filtration hardware and relight software. Land it soft, and a booster catch follows on the next flight.
       </p>
 
-      <h2>The Honest Part</h2>
+      <figure>
+        <img src="/assets/images/2026-09-18/booster-return-web.jpg" alt="A Super Heavy booster descending toward the launch tower's catch arms at dusk">
+        <figcaption>Super Heavy on final approach to the tower arms at Starbase. Booster 21 won't be caught this time — but a soft splashdown sets up the next one. <a href="https://commons.wikimedia.org/wiki/File:Starship_Booster_Return_on_Final_Approach_(54063904149).jpg">Wikimedia Commons</a>, CC BY 2.0</figcaption>
+      </figure>
+
+      <h2>The honest part</h2>
 
       <p>
-        Reaching orbit is a real threshold and I'm not going to pretend otherwise. It's also the first Starship flight that's expected to make money: SpaceX's CFO told investors at a Goldman Sachs conference this month that Flight 14 will be a revenue-generating flight, because those 26 satellites go to work instead of burning up. After three years of test flights that were pure cost, that's a different kind of first.
+        Reaching orbit is a real threshold and I'm not going to pretend otherwise. It's also the first Starship flight expected to make money — SpaceX's CFO told investors this month that Flight 14 will be revenue-generating, because those 26 satellites go to work instead of burning up. After three years of flights that were pure cost, that's a different kind of first.
       </p>
 
       <p>
-        But three hard things still sit between this flight and the future SpaceX keeps describing: catching the ship, refueling it in orbit, and a heat shield that survives without an inspection crew. NASA's own estimate for the Artemis lunar lander is that it'll take somewhere between ten and sixteen tanker flights to refuel one ship in orbit, and a Government Accountability Office report in July found SpaceX more than a year behind on key lander milestones. None of that is a reason to be cynical. It's the reason the schedule talk you hear from everyone else should be discounted.
+        But three hard things still sit between this flight and the future SpaceX keeps describing: catching the ship, refuelling it in orbit, and a heat shield that survives without an inspection crew. NASA's own estimate for the Artemis lander is ten to sixteen tanker flights to refuel a single ship in orbit, and a GAO report in July found SpaceX more than a year behind on key lander milestones. None of that is a reason to be cynical. It's the reason to discount the schedule talk you hear from everyone else.
       </p>
 
       <p>
         So: Monday's flight is worth watching, and it is not the finish line. It's the first time the ship has to come home from somewhere it can't drift back from. That's a new problem, and new problems are the interesting kind.
       </p>
 
-      <h2>One Last Thing</h2>
+      <h2>One last thing</h2>
 
       <p>
-        I keep thinking about what a heat shield actually is. It's the only part of a rocket designed to be destroyed slowly, and the only part whose whole job is to make the next flight possible. It gets no camera time, no applause, and if it works perfectly you'll never hear its name.
+        A heat shield is the only part of a rocket designed to be destroyed slowly, and the only part whose whole job is to make the next flight possible. No camera time. No applause. If it works perfectly, you'll never hear its name.
       </p>
 
       <p>
-        Which is true of most of the things that actually hold our lives together. The plumbing. The pressure vessel. The valve seat. The tile.
+        Which is true of most of the things that hold our lives together. The plumbing. The pressure vessel. The valve seat. The tile.
       </p>
 
       <p>
         So my question this week: <strong>what's the unglamorous part of what you're building that everything else depends on?</strong> Reply and tell me. I read every response.
       </p>
-    </div>
+
+
+<script>
+(function () {
+  var NS = "orbitinsights-2026-09-18";
+  var BASE = "https://abacus.jasoncameron.dev";
+  var OPTS = [
+    ["orbit", "Getting to orbit at all"],
+    ["heatshield", "The heat shield surviving reuse"],
+    ["refuel", "Refuelling in orbit"],
+    ["catch", "Catching the ship"]
+  ];
+  var box = document.getElementById("pollOpts");
+  var res = document.getElementById("pollResults");
+  var note = document.getElementById("pollNote");
+  var voted = null;
+  try { voted = localStorage.getItem("oi_poll_" + NS); } catch (e) {}
+
+  function render(opts) {
+    var total = opts.reduce(function (a, o) { return a + o.n; }, 0) || 1;
+    var html = "";
+    opts.forEach(function (o) {
+      var pct = Math.round(100 * o.n / total);
+      html += '<div class="poll-row"><div>' + o.label +
+        ' — <strong>' + pct + '%</strong>' +
+        (voted === o.key ? ' <span class="poll-mine">(your pick)</span>' : '') +
+        '</div><div class="poll-bar"><div class="poll-fill" style="width:' + pct + '%"></div></div></div>';
+    });
+    html += '<div class="poll-note">' + total + ' vote' + (total === 1 ? '' : 's') + ' so far.</div>';
+    res.innerHTML = html;
+    res.hidden = false;
+  }
+
+  function load() {
+    Promise.all(OPTS.map(function (o) {
+      return fetch(BASE + "/get/" + NS + "/" + o[0])
+        .then(function (r) { return r.json(); })
+        .then(function (d) { return { key: o[0], label: o[1], n: (d.value || 0) }; })
+        .catch(function () { return { key: o[0], label: o[1], n: 0 }; });
+    })).then(render).catch(function () {
+      note.textContent = "Poll is unreachable right now — reply to this email with your pick and I'll count it.";
+    });
+  }
+
+  function vote(key) {
+    fetch(BASE + "/hit/" + NS + "/" + key).catch(function () {});
+    voted = key;
+    try { localStorage.setItem("oi_poll_" + NS, key); } catch (e) {}
+    box.innerHTML = "";
+    load();
+  }
+
+  OPTS.forEach(function (o) {
+    var b = document.createElement("button");
+    b.className = "poll-btn";
+    b.textContent = o[1];
+    b.onclick = function () { vote(o[0]); };
+    box.appendChild(b);
+  });
+
+  if (voted) { box.innerHTML = '<div class="poll-note">You already voted — here\'s where it stands.</div>'; }
+  load();
+})();
+</script>
+</div>
 
     <footer>
       <p style="margin-bottom: 1rem;"><strong>💡 Want to see the patterns before they become obvious?</strong> <a href="/subscribe" style="color: var(--accent);">Join our newsletter →</a> I track the edges where space technology becomes infrastructure, where the sky opens or closes, where AI meets the high ground. Every Friday, insights that mainstream tech news completely misses.</p>
