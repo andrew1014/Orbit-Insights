@@ -30,6 +30,60 @@ This site is a **fully automated AI content pipeline** — the weekly newsletter
 4. **Deploy** — pushed to GitHub Pages via SSH
 5. **Email** — short teaser campaign built in MailerLite (hook + thesis box + CTA, dark theme), sent to subscribers
 
+## Engineering Notes
+
+The pipeline above is documented elsewhere. What follows is the part that was actually
+difficult — the failures, and the decisions they forced. This is the honest record of
+building an unattended publishing system.
+
+### A scheduled job duplicated a live post and emailed it twice
+
+The first version of the weekly job had no guard against re-running. A retry after a
+transient failure fired the whole sequence a second time and published a duplicate post,
+then sent a second campaign to the whole list.
+
+**Fix:** step 0 of the job is now an idempotency check — it looks for today's post and
+campaign *before* writing anything, and exits if either exists. The general lesson is that
+any recurring job on dated content will eventually double-fire; the question is only whether
+you find out from a log or from your subscribers.
+
+### The newsletter silently stopped sending for a week
+
+The automation reported success and nothing arrived. The cause was in infrastructure rather
+than code: bot profiles need credentials cloned from the main profile, not just a config
+file. A profile with a hollow credential file fires its cron job exactly on time and fails
+instantly with `blocked_config: provider credential missing`.
+
+**Fix:** a health check that distinguishes *"fired on time, failed instantly"* (credentials)
+from *"interrupted by shutdown"* (host went down mid-run). Those two symptoms look identical
+from a scheduler and have completely different causes.
+
+### The email API rejected the obvious call
+
+`PUT /campaigns/{id}/content` returns 404 on this account. Campaign bodies have to be
+updated via `PUT /campaigns/{id}` carrying the name and recipient list, while preserving the
+template's placeholder tokens.
+
+**Fix:** splice new content into the existing wrapper rather than replacing the body, and
+documented so it never gets re-probed. Undocumented API behaviour is a permanent tax on
+whoever maintains the integration.
+
+### An image was captioned wrongly because it was never looked at
+
+A file labelled "Starship reentry" turned out to be NOAA satellite imagery of a launch
+plume. Almost published with a caption describing something that was not in the picture.
+
+**Fix:** every image is visually verified before it is captioned. Filenames are not evidence.
+
+### Editorial constraints are engineering constraints
+
+The default read is held to roughly 1,000–1,200 words with supporting depth collapsed into
+expandable sections, because a newsletter that arrives too long does not get read twice.
+Every issue carries an image. These are enforced by the pipeline, not left to judgement at
+write time.
+
+---
+
 ## Tech Stack
 
 | Layer | Technology |
