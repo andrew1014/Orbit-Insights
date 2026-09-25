@@ -1,0 +1,547 @@
+---
+title: The Robot That Went to Rescue a Telescope Burned Up Today
+date: 2026-09-25
+categories: space-tech, satellite-servicing
+layout: null
+permalink: /2026/09/25/the-robot-that-couldnt-save-the-telescope/
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Robot That Went to Rescue a Telescope Burned Up Today - Orbit Insights</title>
+  <style>
+    :root {
+      --dark-bg: #0f0f0f;
+      --card-bg: #1a1a2e;
+      --accent: #00f2f2;
+      --accent-light: #00e6e6;
+      --text: #e0e0e0;
+      --text-muted: #aaaaaa;
+      --border: #2a3f5f;
+      --code-bg: #0d0d1f;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: var(--dark-bg);
+      color: var(--text);
+      font-family: 'Segoe UI', sans-serif;
+      line-height: 1.8;
+    }
+
+    .stars {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .star {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background: #fff;
+      border-radius: 50%;
+    }
+
+    .star.slow {
+      animation: twinkle-slow 3s infinite alternate;
+    }
+
+    .star.medium {
+      animation: twinkle-medium 2s infinite alternate;
+    }
+
+    .star.fast {
+      animation: twinkle-fast 1.2s infinite alternate;
+    }
+
+    .star.large {
+      width: 3px;
+      height: 3px;
+    }
+
+    @keyframes twinkle-slow {
+      0% { opacity: 0.1; }
+      100% { opacity: 0.5; }
+    }
+
+    @keyframes twinkle-medium {
+      0% { opacity: 0.15; }
+      100% { opacity: 0.4; }
+    }
+
+    @keyframes twinkle-fast {
+      0% { opacity: 0.2; }
+      100% { opacity: 0.45; }
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    header {
+      margin-bottom: 2rem;
+      padding-bottom: 2rem;
+      border-bottom: 2px solid var(--border);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+      text-shadow: 0 0 10px rgba(0, 242, 242, 0.3);
+    }
+
+    .meta {
+      display: flex;
+      gap: 2rem;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .meta span {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .content {
+      color: var(--text);
+    }
+
+    .content h2 {
+      font-size: 1.5rem;
+      color: var(--accent);
+      margin: 2rem 0 1rem 0;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .content h3 {
+      font-size: 1.2rem;
+      color: var(--accent-light);
+      margin: 1.5rem 0 0.75rem 0;
+    }
+
+    .content p {
+      margin-bottom: 1rem;
+      line-height: 1.8;
+    }
+
+    .content ul, .content ol {
+      margin: 1rem 0 1rem 2rem;
+    }
+
+    .content li {
+      margin-bottom: 0.5rem;
+    }
+
+    .content a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: all 0.2s ease;
+      border-bottom: 1px solid transparent;
+    }
+
+    .content a:hover {
+      color: var(--accent-light);
+      border-bottom-color: var(--accent);
+    }
+
+    .highlight-box {
+      background: rgba(0, 242, 242, 0.05);
+      border-left: 3px solid var(--accent);
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 4px;
+    }
+
+    .highlight-box strong {
+      color: var(--accent);
+    }
+
+    footer {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      color: var(--text-muted);
+    }
+
+    .back-link {
+      display: inline-block;
+      color: var(--accent);
+      text-decoration: none;
+      margin-bottom: 2rem;
+      transition: all 0.2s ease;
+    }
+
+    .back-link:hover {
+      margin-right: -5px;
+      color: var(--accent-light);
+    }
+
+    strong {
+      color: var(--accent-light);
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 1rem;
+      }
+
+      header h1 {
+        font-size: 1.8rem;
+      }
+
+      .meta {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+  
+    /* --- article media, collapsible depth, and poll --- */
+    figure { margin: 2.2rem 0; }
+    figure img { width: 100%; height: auto; display: block; border-radius: 10px;
+                 border: 1px solid var(--border); }
+    figcaption { font-size: 0.82rem; color: var(--text-muted); margin-top: 0.6rem;
+                 line-height: 1.5; }
+    figcaption a { color: var(--accent); text-decoration: none; }
+    .flight-card { background: var(--card-bg); border: 1px solid var(--border);
+                   border-radius: 10px; padding: 1.2rem 1.4rem; margin: 1.8rem 0; }
+    .flight-card ul { margin: 0; padding-left: 1.1rem; }
+    .flight-card li { margin-bottom: 0.55rem; }
+    details { background: var(--card-bg); border: 1px solid var(--border);
+              border-radius: 10px; padding: 0.9rem 1.2rem; margin: 1.1rem 0; }
+    details summary { cursor: pointer; font-weight: 600; color: var(--accent);
+                      list-style: none; }
+    details summary::-webkit-details-marker { display: none; }
+    details summary:before { content: "▸ "; }
+    details[open] summary:before { content: "▾ "; }
+    details p { margin-top: 0.9rem; }
+    .poll { background: var(--card-bg); border: 1px solid var(--accent);
+            border-radius: 12px; padding: 1.4rem 1.5rem; margin: 2.4rem 0; }
+    .poll h3 { margin: 0 0 0.4rem; color: var(--accent); font-size: 1.15rem; }
+    .poll-sub { font-size: 0.9rem; color: var(--text-muted); margin: 0 0 1.1rem; }
+    .poll-btn { display: block; width: 100%; text-align: left; margin-bottom: 0.55rem;
+                padding: 0.7rem 1rem; background: #0d0d1f; color: var(--text);
+                border: 1px solid var(--border); border-radius: 8px;
+                font-size: 0.95rem; cursor: pointer; font-family: inherit;
+                transition: border-color 0.15s, background 0.15s; }
+    .poll-btn:hover { border-color: var(--accent); }
+    .poll-btn:disabled { cursor: default; opacity: 0.75; }
+    .poll-row { margin-bottom: 0.7rem; font-size: 0.92rem; }
+    .poll-bar { height: 9px; background: #0d0d1f; border-radius: 5px;
+                overflow: hidden; margin-top: 0.3rem; }
+    .poll-fill { height: 100%; background: var(--accent); width: 0; }
+    .poll-note { font-size: 0.82rem; color: var(--text-muted); margin: 0.9rem 0 0; }
+    .poll-mine { color: var(--accent); font-weight: 600; }
+  </style>
+</head>
+<body>
+  <div class="stars">
+    <div class="star slow" style="top: 10%; left: 5%;"></div>
+    <div class="star fast large" style="top: 15%; left: 25%; animation-delay: 0.5s;"></div>
+    <div class="star medium" style="top: 12%; left: 45%; animation-delay: 1s;"></div>
+    <div class="star slow" style="top: 18%; left: 70%; animation-delay: 1.5s;"></div>
+    <div class="star fast" style="top: 10%; left: 85%; animation-delay: 0.2s;"></div>
+
+    <div class="star medium" style="top: 35%; left: 15%; animation-delay: 2s;"></div>
+    <div class="star slow large" style="top: 40%; left: 35%; animation-delay: 2.5s;"></div>
+    <div class="star fast" style="top: 32%; left: 55%; animation-delay: 1.2s;"></div>
+    <div class="star medium" style="top: 45%; left: 75%; animation-delay: 0.8s;"></div>
+    <div class="star slow" style="top: 38%; left: 90%; animation-delay: 3s;"></div>
+
+    <div class="star fast" style="top: 62%; left: 10%; animation-delay: 1.8s;"></div>
+    <div class="star medium" style="top: 70%; left: 30%; animation-delay: 2.2s;"></div>
+    <div class="star slow large" style="top: 65%; left: 50%; animation-delay: 3.5s;"></div>
+    <div class="star fast" style="top: 75%; left: 68%; animation-delay: 0.6s;"></div>
+    <div class="star medium" style="top: 60%; left: 85%; animation-delay: 1.4s;"></div>
+
+    <div class="star slow" style="top: 88%; left: 20%; animation-delay: 2.8s;"></div>
+    <div class="star fast large" style="top: 90%; left: 75%; animation-delay: 0.9s;"></div>
+  </div>
+
+  <div class="container">
+    <a href="/" class="back-link">← Back to Orbit Insights</a>
+
+    <header>
+      <h1>🔧 The Robot That Went to Rescue a Telescope Burned Up Today</h1>
+      <div class="meta">
+        <span>📅 September 25, 2026</span>
+        <span>📂 Satellite Servicing &amp; Repair</span>
+      </div>
+    </header>
+
+    <div class="content">
+      <p style="font-size: 1.1rem; font-style: italic; color: var(--text-muted); margin-bottom: 2rem;">
+        On Friday, Katalyst Space announced that LINK — a 425-kilogram robot built in nine months to grab a dying NASA telescope and lift it back to safety — had deorbited and burned up in the atmosphere. It never got to do the thing it was built for. It closed to within 12 kilometers of the target and stopped there.
+      </p>
+
+      <figure>
+        <img src="/assets/images/2026-09-25/swift-artist-concept.jpg" alt="Artist's concept of NASA's Neil Gehrels Swift Observatory in orbit above Earth">
+        <figcaption>NASA's Neil Gehrels Swift Observatory, in an artist's concept from 2025. It has no engine, no docking port, and — without help — a few months left. <a href="https://commons.wikimedia.org/wiki/File:Swift_Spacecraft_Animations-_2025_(SVS14786_-_SWIFT_S1_v2_0280).jpg">NASA / Goddard Conceptual Image Lab</a>, public domain</figcaption>
+      </figure>
+
+      <h2>The short version</h2>
+
+      <div class="flight-card">
+        <ul>
+          <li><strong>What:</strong> The Swift boost mission — the first commercial attempt to rendezvous with a NASA satellite, grab it, and raise its orbit.</li>
+          <li><strong>Who:</strong> Katalyst Space, which won a $30 million contract in <strong>September 2025</strong> and beat out Starfish Space and a Cambrian Works / Astroscale team to get it.</li>
+          <li><strong>The clock:</strong> Swift was launched in <strong>2004</strong> with no propulsion of its own. Atmospheric drag has pulled it from about <strong>600 km down to about 400 km</strong>, and an active solar cycle made it sink faster. Uncontrolled reentry was expected by the end of 2026.</li>
+          <li><strong>The robot:</strong> LINK — 425 kg, three robotic arms on a single "split Stewart platform," lidar and three-degree-of-freedom grippers, built and launched in <strong>nine months</strong> from contract award.</li>
+          <li><strong>Launch:</strong> July 3, 2026, air-dropped from the L-1011 <em>Stargazer</em> over Kwajalein Atoll on a Pegasus XL. It was the last planned Pegasus flight ever.</li>
+          <li><strong>Outcome:</strong> 85 days on orbit. Two of three reaction wheels failed in commissioning. The capture was called off on August 19. LINK reentered and burned up on September 25.</li>
+          <li><strong>Swift:</strong> still up there, still sinking. Still expected to reenter by year's end.</li>
+        </ul>
+      </div>
+
+      <div class="highlight-box">
+        <strong>Here's the thesis:</strong> we spent twenty years building a repair culture on the ground — right-to-repair laws, iFixit teardowns, repair cafés, a whole generation that refuses to accept that a thing you bought is a thing you can't open. Orbit never got the memo. Swift was never designed to be serviced: no docking port, no grapple fixtures, and no close-out photographs of its own underside. LINK showed up with three robotic arms and had to pick a lock that was never meant to open. That's not a robotics failure. It's the exact problem the repair movement has been shouting about since 2013, relocated 400 kilometers straight up.
+      </div>
+
+      <h2>Swift was never built to be saved</h2>
+
+      <p>
+        The Neil Gehrels Swift Observatory launched in 2004 as a gamma-ray burst hunter — a telescope that swings around fast enough to catch the most violent explosions in the universe before they fade. It finds about <strong>one hundred bursts a year</strong> and hands the coordinates to everybody else's telescopes. There's no replacement planned for it. NASA puts its total cost, build through operate, at around <strong>$500 million</strong>.
+      </p>
+
+      <p>
+        What it doesn't have is a thruster. So it sinks. Every satellite in low Earth orbit drags against the thin top of the atmosphere, and when the Sun gets busy, the atmosphere puffs up and the drag gets worse. Around the 2024 solar maximum, Swift started coming down faster than anyone had budgeted for.
+      </p>
+
+      <p>
+        In February, Swift's operators did something I find quietly heartbreaking. They <strong>shut down most of its science</strong> and turned the spacecraft and its solar arrays to present the smallest possible profile to the oncoming air — cutting its cross-sectional area by about 30% — purely so it would fall more slowly. A working observatory, parked, nose into the wind, to buy a few more months.
+      </p>
+
+      <p>
+        Below roughly <strong>300 km</strong>, the numbers stop working: too much drag for a visiting spacecraft to hold onto the pair. So NASA put a clock on it, and then went shopping.
+      </p>
+
+      <details>
+        <summary>Why NASA had to buy this instead of doing it itself</summary>
+        <p>
+          NASA had an in-house servicing mission, OSAM-1 — formerly Restore-L — meant to refuel and service satellites robotically. It was canceled in 2024 after years of cost overruns. That cancellation is why the Swift rescue went out to commercial bid: two companies got $150,000 concept-study contracts in August 2025, and Katalyst got the real one in September.
+        </p>
+        <p>
+          $30 million is a startlingly small number for this. Swift cost about $250 million to build and launch in 2004. A Pegasus launch alone ran $28 million back in 2021. Katalyst reportedly got the launch at a discount because the rocket had been built for someone else.
+        </p>
+      </details>
+
+      <h2>Nine months, contract to launch</h2>
+
+      <p>
+        Forget the ending for a second. Katalyst was awarded this contract in September 2025 and launched on July 3, 2026. Environmental testing at Goddard wrapped on May 4 — <strong>eight months after award</strong>. A comparable mission would normally take about <strong>twenty-four months</strong> from award to launch.
+      </p>
+
+      <p>
+        They picked the Pegasus partly because it could hit Swift's low, 20.6-degree orbit. Pegasus is the strange one in the launch business: a rocket that gets dropped from under a converted airliner at 39,000 feet and ignites on the way down. It's also a rocket that is being retired — LINK rode the last one.
+      </p>
+
+      <figure>
+        <img src="/assets/images/2026-09-25/pegasus-air-launch.jpg" alt="A Pegasus XL rocket separating from the Stargazer L-1011 aircraft and igniting over the Atlantic">
+        <figcaption>A Pegasus XL drops away from the L-1011 <em>Stargazer</em> and lights its first stage. LINK launched the same way on July 3 — the last planned Pegasus flight. <a href="https://commons.wikimedia.org/wiki/File:Launch_of_Pegasus_F43_from_Stargazer_(KSC-20161215-PH_LAL02_0001).jpg">NASA / Lori Losey</a>, public domain</figcaption>
+      </figure>
+
+      <h2>What actually broke was boring</h2>
+
+      <p>
+        On July 25, three weeks after launch, LINK lost attitude control and started tumbling — a multi-axis spin at roughly <strong>nine degrees per second</strong>, fast enough to break communications and trip a full bus reset.
+      </p>
+
+      <p>
+        The root of it was mundane. After 24 hours without contact the spacecraft had reset itself, and that reset sent a temperature spike through the control electronics for its reaction wheels. <strong>Two of LINK's three reaction wheels stopped working.</strong> Its cold-gas thrusters were degraded too. The spacecraft was, for a while, a tumbling box.
+      </p>
+
+      <p>
+        Then the team did the hard part. Over days, using the gimbaled electric Hall-effect thrusters, they walked the tumble down from 9 degrees per second to <strong>1.47</strong>. They wrote entirely new guidance, navigation and control modes around a spacecraft that now had only one reaction wheel and partial thruster control. They uplinked the new flight software on August 11 and started maneuvering toward Swift.
+      </p>
+
+      <figure>
+        <img src="/assets/images/2026-09-25/reaction-wheel.jpg" alt="A NASA reaction wheel, a cylindrical momentum wheel used for spacecraft attitude control">
+        <figcaption>A reaction wheel. LINK carried three. Two died from an electrical fault, and that — not the robotic arms — is what ended the rescue. <a href="https://commons.wikimedia.org/wiki/File:Reaction_wheel02.jpg">NASA</a>, public domain</figcaption>
+      </figure>
+
+      <p>
+        But attitude control was now leaning hard on the thrusters, and steering a spacecraft with thrusters burns propellant fast. Katalyst and NASA looked at the numbers together and concluded LINK <strong>no longer had enough fuel to safely grab Swift and lift it</strong>. On August 19, they called off the boost.
+      </p>
+
+      <p>
+        Read that again. The robotic arms worked. The lidar worked. The grippers worked. The rendezvous sensors worked. What killed the mission was a power-system fault and a pair of spinning wheels — the plumbing of the spacecraft. Nobody puts reaction wheels on a mission patch.
+      </p>
+
+      <div class="poll" id="poll">
+        <h3>What actually decides whether orbit gets a repair industry?</h3>
+        <p class="poll-sub">Four candidates. Pick the one you think matters most.</p>
+        <div id="pollOpts"></div>
+        <div id="pollResults" class="poll-results" hidden></div>
+        <p class="poll-note" id="pollNote">One vote per reader, counted live.</p>
+      </div>
+
+      <h2>What LINK did get done</h2>
+
+      <p>
+        It spent 85 days on orbit, and it didn't waste them. After the boost was off the table, LINK went and did the thing anyway, minus the grab: it closed to <strong>within 12 to 15 kilometers of Swift</strong> and photographed it — coarse images, but images of a spacecraft nobody had seen up close in twenty years.
+      </p>
+
+      <p>
+        It also exercised the robotic system: kinematic control on all three arms, lifetime testing, and rehearsals of the grapple sequence with the actual grippers, to validate the procedures a real capture would use. Every major subsystem sent back flight data.
+      </p>
+
+      <p>
+        Katalyst's CEO, Ghonhee Lee, put it this way: <em>"While we did not accomplish every objective we set out to achieve, in less than a year we went from mission concept to launching and operating the first commercial space robot. This is a foundation we can build on."</em>
+      </p>
+
+      <p>
+        NASA wasn't spinning it either. Shawn Domagal-Goldman, who runs the agency's astrophysics division, called it high-risk and high-reward from the start and said the effort was worthwhile "either way." Jared Isaacman, the NASA administrator, said plainly: <em>"This is not the outcome we were working toward, but it does not change why this mission was worth attempting."</em>
+      </p>
+
+      <details>
+        <summary>What Katalyst does next</summary>
+        <p>
+          Four follow-on missions and programs are in development, all built on a standard platform called NEXUS rather than starting over. Those include a Deorbit-as-a-Service mission selected by the Defense Innovation Unit for the Space Development Agency, and ASGARD, a power-beaming mission with the U.S. Naval Research Lab. The LINK flight data feeds straight into all of it.
+        </p>
+        <p>
+          LINK's mission patch carried the Latin motto <em>Audentes fortuna iuvat</em> — "fortune favors the bold." Which is either ironic this week or exactly the point, depending on how you read it.
+        </p>
+      </details>
+
+      <h2>The part the industry doesn't say out loud</h2>
+
+      <p>
+        Here's what I keep coming back to. We have a whole culture now that treats repairability as a right. You can look up a teardown of almost anything. There are laws. There are cafés where strangers fix your toaster on a Saturday. The idea that you'd spend real money on something deliberately sealed against the people who own it is, on the ground, broadly considered a scam.
+      </p>
+
+      <p>
+        In orbit, we do it constantly. Swift was not designed to be serviced — there isn't a bolt on it that a rescue crew was supposed to reach. LINK had to improvise a grip on ground-handling flanges, and the plan was to eyeball the intended and backup attachment points first to make sure nothing was obstructed, because a previous servicing mission to Hubble taught engineers that spacecraft insulation goes brittle in the space environment and can shatter on contact. Nobody even had a photograph of Swift's underside to work from.
+      </p>
+
+      <figure>
+        <img src="/assets/images/2026-09-25/swift-spacecraft-model.jpg" alt="A model of the Swift spacecraft showing its body, solar arrays and instruments">
+        <figcaption>A model of Swift. No docking port, no grapple fixtures, no close-out photos of its base. Swift's mission director described the spacecraft as "unprepared but cooperative." <a href="https://commons.wikimedia.org/wiki/File:Swift_Observatory_spacecraft_model.png">NASA E/PO, Sonoma State University / Aurore Simonnet</a>, public domain</figcaption>
+      </figure>
+
+      <p>
+        <strong>"Unprepared but cooperative."</strong> That's the quote of the week for me — a twenty-two-year-old telescope that can't be fixed, that has no idea it's in trouble, that will still try to point itself helpfully while a stranger with three arms fumbles around its underside.
+      </p>
+
+      <p>
+        Swift is the object. The design decision is the story. Every satellite we launch without a way to reach it is a telescope, a weather satellite, or a relay station with a countdown attached. And if the boost does eventually become routine, Swift will be a rare historical case: one of the few spacecraft ever built to be thrown away that got a second chance. Except it didn't.
+      </p>
+
+      <h2>The honest part</h2>
+
+      <p>
+        I'm not going to dress this up. <strong>Swift is going to burn up by the end of the year, and $30 million didn't stop it.</strong> If LINK had worked, Swift would have gotten at least ten more years of science. It won't.
+      </p>
+
+      <p>
+        But be careful with the ledger here. The alternative to trying wasn't "Swift gets saved anyway." The alternative was doing nothing and watching it reenter with no new knowledge at all. What exists now is a working relationship between NASA and a small company, a standardized platform, four missions in development, and flight data from a spacecraft that lost two reaction wheels and kept flying. That data is the product. The telescope was the goal.
+      </p>
+
+      <p>
+        And this is not solved. Not close. One attempt, abandoned, with the robot destroyed on the way down. It is worth remembering that the first Falcon 9 booster to fly twice was a stunt too, and that the servicing business — the actual "we can go fix your satellite" business — has been fifteen years away for fifteen years.
+      </p>
+
+      <h2>One last thing</h2>
+
+      <p>
+        The thing I love about the repair subculture isn't the saving of money or the saving of waste. It's that it's fundamentally a claim about ownership. You bought it, so you get to open it. You keep it alive, so it's yours.
+      </p>
+
+      <p>
+        In orbit, nobody owns anything that way. You can buy a satellite, but you can't open it, and when it breaks you get to watch. This week, for the first time, somebody showed up with tools. They came within 12 kilometers of doing the job, and then the tools stopped working.
+      </p>
+
+      <p>
+        So my question this week: <strong>what's one thing you refuse to throw away, and who taught you how to keep it alive?</strong> I read every response.
+      </p>
+
+
+<script>
+(function () {
+  var NS = "orbitinsights-2026-09-25";
+  var BASE = "https://abacus.jasoncameron.dev";
+  var OPTS = [
+    ["fuel", "Fuel and propellant margin"],
+    ["boring", "Boring subsystems failing (wheels, power, software)"],
+    ["design", "Nobody designs satellites to be reached"],
+    ["money", "The economics — it's cheaper to replace than rescue"]
+  ];
+  var box = document.getElementById("pollOpts");
+  var res = document.getElementById("pollResults");
+  var note = document.getElementById("pollNote");
+  var voted = null;
+  try { voted = localStorage.getItem("oi_poll_" + NS); } catch (e) {}
+
+  function render(opts) {
+    var total = opts.reduce(function (a, o) { return a + o.n; }, 0) || 1;
+    var html = "";
+    opts.forEach(function (o) {
+      var pct = Math.round(100 * o.n / total);
+      html += '<div class="poll-row"><div>' + o.label +
+        ' — <strong>' + pct + '%</strong>' +
+        (voted === o.key ? ' <span class="poll-mine">(your pick)</span>' : '') +
+        '</div><div class="poll-bar"><div class="poll-fill" style="width:' + pct + '%"></div></div></div>';
+    });
+    html += '<div class="poll-note">' + total + ' vote' + (total === 1 ? '' : 's') + ' so far.</div>';
+    res.innerHTML = html;
+    res.hidden = false;
+  }
+
+  function load() {
+    Promise.all(OPTS.map(function (o) {
+      return fetch(BASE + "/get/" + NS + "/" + o[0])
+        .then(function (r) { return r.json(); })
+        .then(function (d) { return { key: o[0], label: o[1], n: (d.value || 0) }; })
+        .catch(function () { return { key: o[0], label: o[1], n: 0 }; });
+    })).then(render).catch(function () {
+      note.textContent = "Poll is unreachable right now — reply to this email with your pick and I'll count it.";
+    });
+  }
+
+  function vote(key) {
+    fetch(BASE + "/hit/" + NS + "/" + key).catch(function () {});
+    voted = key;
+    try { localStorage.setItem("oi_poll_" + NS, key); } catch (e) {}
+    box.innerHTML = "";
+    load();
+  }
+
+  OPTS.forEach(function (o) {
+    var b = document.createElement("button");
+    b.className = "poll-btn";
+    b.textContent = o[1];
+    b.onclick = function () { vote(o[0]); };
+    box.appendChild(b);
+  });
+
+  if (voted) { box.innerHTML = '<div class="poll-note">You already voted — here\'s where it stands.</div>'; }
+  load();
+})();
+</script>
+</div>
+
+    <footer>
+      <p style="margin-bottom: 1rem;"><strong>💡 Want to see the patterns before they become obvious?</strong> <a href="/subscribe" style="color: var(--accent);">Join our newsletter →</a> I track the edges where space technology becomes infrastructure, where the sky opens or closes, where AI meets the high ground. Every Friday, insights that mainstream tech news completely misses.</p>
+      <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-muted);">&copy; 2026 Orbit Insights. Exploring the cosmos, one insight at a time.</p>
+    </footer>
+  </div>
+</body>
+</html>

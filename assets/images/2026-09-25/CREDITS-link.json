@@ -1,0 +1,38 @@
+[
+  {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Swift_Spacecraft_Animations-_2025_%28SVS14786_-_SWIFT_S1_v2_0280%29.jpg/1280px-Swift_Spacecraft_Animations-_2025_%28SVS14786_-_SWIFT_S1_v2_0280%29.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Swift_Spacecraft_Animations-_2025_(SVS14786_-_SWIFT_S1_v2_0280).jpg",
+    "license": "Public domain (NASA)",
+    "artist": "NASA's Scientific Visualization Studio / Goddard Conceptual Image Lab",
+    "file": "swift-artist-concept.jpg",
+    "caption": "NASA's Neil Gehrels Swift Observatory, in an artist's concept released in 2025. Launched in 2004, it has no propulsion and has been sinking through the upper atmosphere for years.",
+    "bytes": 84271
+  },
+  {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Launch_of_Pegasus_F43_from_Stargazer_%28KSC-20161215-PH_LAL02_0001%29.jpg/1280px-Launch_of_Pegasus_F43_from_Stargazer_%28KSC-20161215-PH_LAL02_0001%29.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Launch_of_Pegasus_F43_from_Stargazer_(KSC-20161215-PH_LAL02_0001).jpg",
+    "license": "Public domain (NASA)",
+    "artist": "NASA / Lori Losey",
+    "file": "pegasus-air-launch.jpg",
+    "caption": "A Pegasus XL rocket drops away from the L-1011 'Stargazer' aircraft and ignites. LINK launched the same way on July 3, 2026 — the last planned flight of a Pegasus.",
+    "bytes": 73262
+  },
+  {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/6/63/Reaction_wheel02.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Reaction_wheel02.jpg",
+    "license": "Public domain (NASA)",
+    "artist": "NASA",
+    "file": "reaction-wheel.jpg",
+    "caption": "A reaction wheel. LINK carried three. Two of them died from an electrical fault, and that — not the robotics — is what ended the rescue.",
+    "bytes": 74876
+  },
+  {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Swift_Observatory_spacecraft_model.png/1280px-Swift_Observatory_spacecraft_model.png",
+    "page": "https://commons.wikimedia.org/wiki/File:Swift_Observatory_spacecraft_model.png",
+    "license": "Public domain (NASA)",
+    "artist": "NASA E/PO, Sonoma State University / Aurore Simonnet",
+    "file": "swift-spacecraft-model.jpg",
+    "caption": "A model of the Swift spacecraft. No docking port, no grapple fixtures, and no close-out photographs of its underside. The repair crew had to find something to hold onto.",
+    "bytes": 1096437
+  }
+]
