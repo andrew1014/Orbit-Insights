@@ -1,0 +1,38 @@
+[
+  {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/LightSail_2.jpg/1280px-LightSail_2.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:LightSail_2.jpg",
+    "license": "CC BY-SA 3.0",
+    "artist": "Josh Spradling / The Planetary Society",
+    "file": "lightsail2-render.jpg",
+    "caption": "Artist's rendering of LightSail 2, The Planetary Society's solar-sail CubeSat, sailing above Earth",
+    "bytes": 311664
+  },
+  {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/ISS-47_CubeSat_deployment_-_MinXSS_and_CADRE_satellites.jpg/1280px-ISS-47_CubeSat_deployment_-_MinXSS_and_CADRE_satellites.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:ISS-47_CubeSat_deployment_-_MinXSS_and_CADRE_satellites.jpg",
+    "license": "Public domain (NASA)",
+    "artist": "NASA",
+    "file": "cubeSat-deploy-iss.jpg",
+    "caption": "CubeSats flying free after release from the NanoRacks deployer outside the ISS Kibo module",
+    "bytes": 95461
+  },
+  {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Morning_Satellite_Ops.jpg/1280px-Morning_Satellite_Ops.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Morning_Satellite_Ops.jpg",
+    "license": "CC BY-SA 2.0",
+    "artist": "Michael Styne",
+    "file": "ham-satellite-ops.jpg",
+    "caption": "Amateur radio operators scanning the horizon for a satellite pass during a morning operating session",
+    "bytes": 435883
+  },
+  {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Alpha_Centauri_A_and_Planet_%28Artist%E2%80%99s_Concept%29_%28weic2515a%29.jpg/1280px-Alpha_Centauri_A_and_Planet_%28Artist%E2%80%99s_Concept%29_%28weic2515a%29.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Alpha_Centauri_A_and_Planet_(Artist%E2%80%99s_Concept)_(weic2515a).jpg",
+    "license": "CC BY 4.0",
+    "artist": "NASA, ESA, CSA, STScI, R. Hurt (Caltech/IPAC)",
+    "file": "alpha-centauri-concept.jpg",
+    "caption": "Artist's concept of a gas giant orbiting Alpha Centauri A, the nearest star system to Earth",
+    "bytes": 243796
+  }
+]
