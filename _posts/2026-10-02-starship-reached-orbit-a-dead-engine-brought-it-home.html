@@ -1,0 +1,535 @@
+---
+title: Starship Reached Orbit. A Dead Engine Brought It Home Early.
+date: 2026-10-02
+categories: space-tech, starship
+layout: null
+permalink: /2026/10/02/starship-reached-orbit-a-dead-engine-brought-it-home/
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Starship Reached Orbit. A Dead Engine Brought It Home Early. - Orbit Insights</title>
+  <style>
+    :root {
+      --dark-bg: #0f0f0f;
+      --card-bg: #1a1a2e;
+      --accent: #00f2f2;
+      --accent-light: #00e6e6;
+      --text: #e0e0e0;
+      --text-muted: #aaaaaa;
+      --border: #2a3f5f;
+      --code-bg: #0d0d1f;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: var(--dark-bg);
+      color: var(--text);
+      font-family: 'Segoe UI', sans-serif;
+      line-height: 1.8;
+    }
+
+    .stars {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .star {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background: #fff;
+      border-radius: 50%;
+    }
+
+    .star.slow {
+      animation: twinkle-slow 3s infinite alternate;
+    }
+
+    .star.medium {
+      animation: twinkle-medium 2s infinite alternate;
+    }
+
+    .star.fast {
+      animation: twinkle-fast 1.2s infinite alternate;
+    }
+
+    .star.large {
+      width: 3px;
+      height: 3px;
+    }
+
+    @keyframes twinkle-slow {
+      0% { opacity: 0.1; }
+      100% { opacity: 0.5; }
+    }
+
+    @keyframes twinkle-medium {
+      0% { opacity: 0.15; }
+      100% { opacity: 0.4; }
+    }
+
+    @keyframes twinkle-fast {
+      0% { opacity: 0.2; }
+      100% { opacity: 0.45; }
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    header {
+      margin-bottom: 2rem;
+      padding-bottom: 2rem;
+      border-bottom: 2px solid var(--border);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+      text-shadow: 0 0 10px rgba(0, 242, 242, 0.3);
+    }
+
+    .meta {
+      display: flex;
+      gap: 2rem;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .meta span {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .content h2 {
+      font-size: 1.6rem;
+      color: var(--accent-light);
+      margin: 2.5rem 0 1rem;
+      line-height: 1.3;
+    }
+
+    .content p {
+      margin-bottom: 1.2rem;
+    }
+
+    .content a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .content a:hover {
+      text-decoration: underline;
+    }
+
+    .highlight-box {
+      background: linear-gradient(135deg, rgba(0, 242, 242, 0.08), rgba(26, 26, 46, 0.6));
+      border-left: 4px solid var(--accent);
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 8px;
+      font-size: 1.05rem;
+    }
+
+    .highlight-box strong {
+      color: var(--accent);
+    }
+
+    footer {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      color: var(--text-muted);
+    }
+
+    .back-link {
+      display: inline-block;
+      color: var(--accent);
+      text-decoration: none;
+      margin-bottom: 2rem;
+      transition: all 0.2s ease;
+    }
+
+    .back-link:hover {
+      margin-right: -5px;
+      color: var(--accent-light);
+    }
+
+    strong {
+      color: var(--accent-light);
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 1rem;
+      }
+
+      header h1 {
+        font-size: 1.8rem;
+      }
+
+      .meta {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+  
+    /* --- article media, collapsible depth, and poll --- */
+    figure { margin: 2.2rem 0; }
+    figure img { width: 100%; height: auto; display: block; border-radius: 10px;
+                 border: 1px solid var(--border); }
+    figcaption { font-size: 0.82rem; color: var(--text-muted); margin-top: 0.6rem;
+                 line-height: 1.5; }
+    figcaption a { color: var(--accent); text-decoration: none; }
+    .flight-card { background: var(--card-bg); border: 1px solid var(--border);
+                   border-radius: 10px; padding: 1.2rem 1.4rem; margin: 1.8rem 0; }
+    .flight-card ul { margin: 0; padding-left: 1.1rem; }
+    .flight-card li { margin-bottom: 0.55rem; }
+    details { background: var(--card-bg); border: 1px solid var(--border);
+              border-radius: 10px; padding: 0.9rem 1.2rem; margin: 1.1rem 0; }
+    details summary { cursor: pointer; font-weight: 600; color: var(--accent);
+                      list-style: none; }
+    details summary::-webkit-details-marker { display: none; }
+    details summary:before { content: "▸ "; }
+    details[open] summary:before { content: "▾ "; }
+    details p { margin-top: 0.9rem; }
+    .poll { background: var(--card-bg); border: 1px solid var(--accent);
+            border-radius: 12px; padding: 1.4rem 1.5rem; margin: 2.4rem 0; }
+    .poll h3 { margin: 0 0 0.4rem; color: var(--accent); font-size: 1.15rem; }
+    .poll-sub { font-size: 0.9rem; color: var(--text-muted); margin: 0 0 1.1rem; }
+    .poll-btn { display: block; width: 100%; text-align: left; margin-bottom: 0.55rem;
+                padding: 0.7rem 1rem; background: #0d0d1f; color: var(--text);
+                border: 1px solid var(--border); border-radius: 8px;
+                font-size: 0.95rem; cursor: pointer; font-family: inherit;
+                transition: border-color 0.15s, background 0.15s; }
+    .poll-btn:hover { border-color: var(--accent); }
+    .poll-btn:disabled { cursor: default; opacity: 0.75; }
+    .poll-row { margin-bottom: 0.7rem; font-size: 0.92rem; }
+    .poll-bar { height: 9px; background: #0d0d1f; border-radius: 5px;
+                overflow: hidden; margin-top: 0.3rem; }
+    .poll-fill { height: 100%; background: var(--accent); width: 0; }
+    .poll-note { font-size: 0.82rem; color: var(--text-muted); margin: 0.9rem 0 0; }
+    .poll-mine { color: var(--accent); font-weight: 600; }
+  </style>
+</head>
+<body>
+  <div class="stars">
+    <div class="star slow" style="top: 10%; left: 5%;"></div>
+    <div class="star fast large" style="top: 15%; left: 25%; animation-delay: 0.5s;"></div>
+    <div class="star medium" style="top: 12%; left: 45%; animation-delay: 1s;"></div>
+    <div class="star slow" style="top: 18%; left: 70%; animation-delay: 1.5s;"></div>
+    <div class="star fast" style="top: 10%; left: 85%; animation-delay: 0.2s;"></div>
+
+    <div class="star medium" style="top: 35%; left: 15%; animation-delay: 2s;"></div>
+    <div class="star slow large" style="top: 40%; left: 35%; animation-delay: 2.5s;"></div>
+    <div class="star fast" style="top: 32%; left: 55%; animation-delay: 1.2s;"></div>
+    <div class="star medium" style="top: 45%; left: 75%; animation-delay: 0.8s;"></div>
+    <div class="star slow" style="top: 38%; left: 90%; animation-delay: 3s;"></div>
+
+    <div class="star fast" style="top: 62%; left: 10%; animation-delay: 1.8s;"></div>
+    <div class="star medium" style="top: 70%; left: 30%; animation-delay: 2.2s;"></div>
+    <div class="star slow large" style="top: 65%; left: 50%; animation-delay: 3.5s;"></div>
+    <div class="star fast" style="top: 75%; left: 68%; animation-delay: 0.6s;"></div>
+    <div class="star medium" style="top: 60%; left: 85%; animation-delay: 1.4s;"></div>
+
+    <div class="star slow" style="top: 88%; left: 20%; animation-delay: 2.8s;"></div>
+    <div class="star fast large" style="top: 90%; left: 75%; animation-delay: 0.9s;"></div>
+  </div>
+
+  <div class="container">
+    <a href="/" class="back-link">← Back to Orbit Insights</a>
+
+    <header>
+      <h1>🚀 Starship Reached Orbit. A Dead Engine Brought It Home Early.</h1>
+      <div class="meta">
+        <span>📅 October 2, 2026</span>
+        <span>📂 Starship &amp; Reusability</span>
+      </div>
+    </header>
+
+    <div class="content">
+      <p style="font-size: 1.1rem; font-style: italic; color: var(--text-muted); margin-bottom: 2rem;">
+        On Monday morning, a Starship left the pad in Texas and went to orbit — the first time in fourteen flights that the vehicle didn't come straight back down. Two hours and twelve minutes later it fired its engines to come home early. The reason has almost nothing to do with the milestone everyone is celebrating.
+      </p>
+
+      <figure>
+        <img src="/assets/images/2026-10-02/starship-full-stack.jpg" alt="A fully stacked Starship and Super Heavy booster on the launch pad at Starbase, Texas">
+        <figcaption>A fully stacked Starship and Super Heavy. Flight 14 was the first time this stack left the atmosphere and stayed there. <a href="https://commons.wikimedia.org/wiki/File:Space_X_booster_Full_Stack.jpg">Jenny Hautmann</a>, CC BY-SA 4.0</figcaption>
+      </figure>
+
+      <h2>The short version</h2>
+
+      <div class="flight-card">
+        <ul>
+          <li><strong>What:</strong> Starship Flight 14 — the program's first orbital flight and first delivery of an operational payload.</li>
+          <li><strong>Vehicle:</strong> Ship 41 and Super Heavy Booster 21, both Block 3 — the configuration actually built to carry satellites rather than serve as a test article.</li>
+          <li><strong>Liftoff:</strong> September 28, 2026, at 12:48:59 UTC (7:48 a.m. Central) from Starbase, Texas.</li>
+          <li><strong>Orbit:</strong> Roughly <strong>262 by 275 kilometers</strong>, at a 30.5-degree inclination.</li>
+          <li><strong>Payload:</strong> 26 Starlink V3 satellites, all deployed over about 30 minutes. Three of them carried cameras pointed back at the ship.</li>
+          <li><strong>Planned:</strong> About six orbits and nearly ten hours in space, splashing down west of Chile.</li>
+          <li><strong>Actual:</strong> Deorbit burn at T+2:12. Splashdown in the Pacific <strong>north of Hawaii</strong> at T+3:08. The ship tipped onto its side and burned.</li>
+          <li><strong>Booster:</strong> A controlled splashdown in the Gulf of Mexico, seven minutes after liftoff.</li>
+          <li><strong>What went wrong:</strong> One Raptor vacuum engine shut down during the ship's ascent. One of the booster's 33 engines also quit, at T+1:16.</li>
+        </ul>
+      </div>
+
+      <div class="highlight-box">
+        <strong>Here's the thesis:</strong> orbit was never the hard part, and Flight 14 proved it twice. It proved it by reaching orbit with a dead engine — SpaceX had publicly said it wouldn't even try, then changed its mind. And it proved it by coming home early for a reason almost nobody had on their bingo card. Those six orbits weren't a victory lap. They were a heat shield endurance test, and that test is the single thing standing between Starship and actually being reusable. The milestone landed. The hard problem got postponed.
+      </div>
+
+      <h2>What actually happened</h2>
+
+      <p>
+        Every one of Starship's first thirteen flights stayed suborbital — on purpose, mostly. The vehicle would claw its way up, arc over, and come back down before it ever had the energy to stay. That was the plan: test the shape, test the tiles, test the flip, don't add the complication of orbit.
+      </p>
+
+      <p>
+        Flight 14 was the first attempt to stop pretending. About 25 minutes after liftoff, Ship 41 lit a single Raptor and burned for nineteen seconds to circularize. Then it opened up and let go of 26 satellites.
+      </p>
+
+      <p>
+        But the ascent wasn't clean. <strong>One of the ship's Raptor vacuum engines shut down early.</strong> That cost the vehicle performance, and it briefly put the whole mission in doubt — SpaceX announced the ship would not commit to orbit, then reversed the call after the flight team looked at the vehicle's actual condition. They went. They made it.
+      </p>
+
+      <p>
+        Then, at roughly two hours in, they brought it home. Not because anything else broke — because the mission plan assumed six full orbits of thermal cycling, and a vehicle that had already lost an engine doesn't get to spend another eight hours finding out what else is marginal. That's not a failure. That's the textbook call.
+      </p>
+
+      <h2>The test they didn't get to run</h2>
+
+      <p>
+        Here's the part I want you to sit with. The six-orbit plan was never about sightseeing. Reentry is where Starship earns or loses its whole reason for existing, and the ship comes back at roughly <strong>Mach 25</strong> into air that turns into plasma around it.
+      </p>
+
+      <p>
+        The only thing between the vehicle and being destroyed is a shell of ceramic tiles — on the order of eighteen thousand of them — and every one of those tiles has to hold. Not once. Every time.
+      </p>
+
+      <figure>
+        <img src="/assets/images/2026-10-02/starship-heat-shield.jpg" alt="The black hexagonal heat shield tiles covering the surface of a Starship vehicle">
+        <figcaption>Eighteen thousand tiles, and the whole reuse case rests on them. Flight 14 was supposed to stress them for six orbits. It got one. <a href="https://commons.wikimedia.org/wiki/File:Starship_S20.jpg">DimaLopatin1999</a>, CC BY-SA 4.0</figcaption>
+      </figure>
+
+      <p>
+        SpaceX has been fighting this problem in public for three years. In July, a trio of former NASA engineers told Ars Technica that the current tile architecture is a dead end for the rapid turnaround SpaceX keeps promising — that the gaps between tiles let hot gas through, and that's not something you fix with better glue.
+      </p>
+
+      <p>
+        Elon Musk has been more direct than his fans about it. A reusable heat shield, he's said, is <strong>"the biggest problem that remains."</strong> Not the engines. Not the catching. The tiles.
+      </p>
+
+      <p>
+        So the six orbits mattered. Six orbits meant six reentries' worth of thermal soak, six chances for a tile to work loose, six rounds of the exact stress that determines whether this vehicle can fly again next month or has to be rebuilt from scratch. Flight 14 flew one orbit and came home. The heat shield got its reentry. It didn't get its endurance test.
+      </p>
+
+      <details>
+        <summary>Why the heat shield, and not the engines, is the real bottleneck</summary>
+        <p>
+          An engine that fails is annoying but legible — you can see it, you can fix it, and Raptor has been through dozens of design revisions already. A heat shield is different. It's not one system; it's eighteen thousand individually bonded parts, each of which can fail in a slightly different way, none of which can be inspected without looking at them.
+        </p>
+        <p>
+          The economics are unforgiving. If you have to replace a meaningful fraction of the tiles between flights, you haven't built a reusable rocket — you've built a rocket that survives, and then spends weeks in a hangar being resurfaced. That's the difference between SpaceX's cost model working and not working. It's also the difference between Starship being a rocket and Starship being an airline.
+        </p>
+      </details>
+
+      <h2>One engine, and a decision</h2>
+
+      <figure>
+        <img src="/assets/images/2026-10-02/raptor-engine.jpg" alt="A SpaceX Raptor engine on display">
+        <figcaption>A Raptor on display. Flight 14 lost one on the booster at T+1:16 and one on the ship during ascent. The ship reached orbit anyway, on fewer engines than planned. <a href="https://commons.wikimedia.org/wiki/File:SpaceX_sea-level_Raptor_at_Hawthorne_-_1.jpg">Brandon De Young</a>, CC BY-SA 4.0</figcaption>
+      </figure>
+
+      <p>
+        The engine failure is worth reading closely, because the response tells you more about where this program actually is than the orbit does.
+      </p>
+
+      <p>
+        Losing a vacuum Raptor on the way up meant the ship was short on performance at exactly the moment it needed margin. SpaceX's first public statement was that the vehicle would <em>not</em> commit to orbit. Then the team evaluated what they had, decided the ship was healthy enough, and went anyway. Orbital insertion succeeded on a single engine.
+      </p>
+
+      <p>
+        Two things are true about that. It's genuinely impressive — reaching orbit with a degraded propulsion system is not a small thing, and it means the vehicle has real margin. And it's a reminder that "successful" and "nominal" are different words. Musk's post that day was <em>"First orbital flight of Starship successful!"</em> He wasn't lying. He also wasn't describing the flight SpaceX planned.
+      </p>
+
+      <div class="poll" id="poll">
+        <h3>What's actually between Starship and real reusability?</h3>
+        <p class="poll-sub">Four candidates. Pick the one you think is the real bottleneck.</p>
+        <div id="pollOpts"></div>
+        <div id="pollResults" class="poll-results" hidden></div>
+        <p class="poll-note" id="pollNote">One vote per reader, counted live.</p>
+      </div>
+
+      <h2>The payload turned around and looked at the ship</h2>
+
+      <p>
+        This is my favorite detail of the whole flight, and it got about four sentences of coverage.
+      </p>
+
+      <p>
+        <strong>Three of the 26 Starlink satellites carried cameras pointed back at Ship 41.</strong> Once they were released, they turned around and photographed the spacecraft's heat shield — while it was still in orbit, after it had already survived one reentry, before it had to do it again.
+      </p>
+
+      <figure>
+        <img src="/assets/images/2026-10-02/starlink-train.jpg" alt="Starlink satellites visible as a train of lights crossing the night sky">
+        <figcaption>Starlink satellites as a visible train. Three of the 26 deployed on Flight 14 were working as inspection cameras for the ship that carried them. <a href="https://commons.wikimedia.org/wiki/File:Starlink_Satellites_Overhead.jpg">M. Lewinsky</a>, CC BY 4.0</figcaption>
+      </figure>
+
+      <p>
+        Think about what that means. For three years, the heat shield has been photographed by amateur astronomers, beachcombers collecting tiles that washed ashore, and SpaceX's own onboard cameras during the violent parts. Now the payload inspects the ride. The thing Starship was built to deliver is the thing doing quality control on Starship.
+      </p>
+
+      <p>
+        That's not a stunt. There is no other way to see the underside of a heat shield in orbit — you can't send a person, and the vehicle can't photograph its own belly. So they put the camera on the cargo.
+      </p>
+
+      <h2>Eighteen years to the day</h2>
+
+      <p>
+        On September 28, 2008, a rocket called Falcon 1 reached orbit on its fourth attempt, after three failures that nearly bankrupted the company that built it. It was the first privately developed liquid-fueled rocket to do it.
+      </p>
+
+      <p>
+        On September 28, 2026 — eighteen years later to the day — Starship reached orbit for the first time.
+      </p>
+
+      <p>
+        I don't think SpaceX planned that. It's the kind of coincidence that makes you go quiet for a second anyway. Falcon 1 was a 21-meter rocket that could lift a few hundred kilograms. Starship is a 120-meter stack that just put 26 satellites into orbit and came home in one piece. The distance between those two dates is what eighteen years of refusing to quit on a vehicle looks like.
+      </p>
+
+      <details>
+        <summary>Why 26 satellites is the number that actually matters</summary>
+        <p>
+          Each Starlink V3 satellite is designed to add roughly <strong>1 terabit per second</strong> of network capacity — a large step up from the V2 Mini satellites that currently ride Falcon 9. Twenty-six of them is roughly 26 Tbps of new capacity in a single flight.
+        </p>
+        <p>
+          The reason that's the real headline: SpaceX needs Starship to build the V3 constellation, because V3 satellites are too big and too heavy for Falcon 9 to carry in useful numbers. Getting a full V3 stack to orbit on the first orbital attempt de-risks the entire build-out schedule. The orbital milestone is symbolic. The payload is operational.
+        </p>
+      </details>
+
+      <h2>The honest part</h2>
+
+      <p>
+        I'm not going to pretend this was a clean win, because the same flight that reached orbit also ended with the spacecraft tipping over in the Pacific and burning.
+      </p>
+
+      <p>
+        SpaceX did not attempt to catch Ship 41. It didn't attempt to catch Booster 21 either — that was a controlled splashdown in the Gulf, which is where the booster program was two years ago. The company has caught a Super Heavy four times now, but the ship itself has never been recovered, and Flight 14 didn't change that.
+      </p>
+
+      <p>
+        So: Starship reached orbit for the first time, deployed a real operational payload, survived reentry, and executed a controlled splashdown — while missing an engine. That is a real milestone, and anyone calling it a failure is being silly.
+      </p>
+
+      <p>
+        But reusability means a vehicle flies, lands, and flies again. Starship has now proven it can fly. The "again" is still entirely unproven, and the piece that decides it — the heat shield — just had its most important test cancelled by an engine.
+      </p>
+
+      <p>
+        Next flight, they try the six orbits again. That's the one to watch. Not because it's more dramatic, but because that's the flight where we find out whether the tiles can take it.
+      </p>
+
+      <h2>One last thing</h2>
+
+      <p>
+        The thing I keep coming back to is how the boring part is always the part that decides things. Nobody puts a tile on a mission patch. Nobody names a spacecraft after a reaction wheel. The engine that quit and the tiles that have to hold are not the parts anyone is here for.
+      </p>
+
+      <p>
+        But the gap between "we reached orbit" and "we can do this again next month" is not closed by the spectacular part. It's closed by eighteen thousand small ceramic parts doing their job, over and over, without anyone watching.
+      </p>
+
+      <p>
+        So my question this week: <strong>what would you need to actually see before you'd believe a rocket is reusable?</strong> One flight is easy to get excited about. I read every response.
+      </p>
+
+
+<script>
+(function () {
+  var NS = "orbitinsights-2026-10-02";
+  var BASE = "https://abacus.jasoncameron.dev";
+  var OPTS = [
+    ["tiles", "The heat shield — tiles surviving repeat reentry"],
+    ["engines", "Raptor reliability — engines that don't quit"],
+    ["catch", "Catching the ship — recovery hardware and turnaround"],
+    ["cadence", "Flight rate — flying often enough for it to count"]
+  ];
+  var box = document.getElementById("pollOpts");
+  var res = document.getElementById("pollResults");
+  var note = document.getElementById("pollNote");
+  var voted = null;
+  try { voted = localStorage.getItem("oi_poll_" + NS); } catch (e) {}
+
+  function render(opts) {
+    var total = opts.reduce(function (a, o) { return a + o.n; }, 0) || 1;
+    var html = "";
+    opts.forEach(function (o) {
+      var pct = Math.round(100 * o.n / total);
+      html += '<div class="poll-row"><div>' + o.label +
+        ' — <strong>' + pct + '%</strong>' +
+        (voted === o.key ? ' <span class="poll-mine">(your pick)</span>' : '') +
+        '</div><div class="poll-bar"><div class="poll-fill" style="width:' + pct + '%"></div></div></div>';
+    });
+    html += '<div class="poll-note">' + total + ' vote' + (total === 1 ? '' : 's') + ' so far.</div>';
+    res.innerHTML = html;
+    res.hidden = false;
+  }
+
+  function load() {
+    Promise.all(OPTS.map(function (o) {
+      return fetch(BASE + "/get/" + NS + "/" + o[0])
+        .then(function (r) { return r.json(); })
+        .then(function (d) { return { key: o[0], label: o[1], n: (d.value || 0) }; })
+        .catch(function () { return { key: o[0], label: o[1], n: 0 }; });
+    })).then(render).catch(function () {
+      note.textContent = "Poll is unreachable right now — reply to this email with your pick and I'll count it.";
+    });
+  }
+
+  function vote(key) {
+    fetch(BASE + "/hit/" + NS + "/" + key).catch(function () {});
+    voted = key;
+    try { localStorage.setItem("oi_poll_" + NS, key); } catch (e) {}
+    box.innerHTML = "";
+    load();
+  }
+
+  OPTS.forEach(function (o) {
+    var b = document.createElement("button");
+    b.className = "poll-btn";
+    b.textContent = o[1];
+    b.onclick = function () { vote(o[0]); };
+    box.appendChild(b);
+  });
+
+  if (voted) { box.innerHTML = '<div class="poll-note">You already voted — here\'s where it stands.</div>'; }
+  load();
+})();
+</script>
+</div>
+
+    <footer>
+      <p style="margin-bottom: 1rem;"><strong>💡 Want to see the patterns before they become obvious?</strong> <a href="/subscribe" style="color: var(--accent);">Join our newsletter →</a> I track the edges where space technology becomes infrastructure, where the sky opens or closes, where AI meets the high ground. Every Friday, insights that mainstream tech news completely misses.</p>
+      <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-muted);">&copy; 2026 Orbit Insights. Exploring the cosmos, one insight at a time.</p>
+    </footer>
+  </div>
+</body>
+</html>
