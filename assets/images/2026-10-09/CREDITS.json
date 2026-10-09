@@ -1,0 +1,29 @@
+[
+  {
+    "file": "electron-launch.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3ARocket_Lab_PREFIRE_and_Ice_Launch_%28KSC-20240605-PH-RKL01_0005%29.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Rocket_Lab_PREFIRE_and_Ice_Launch_%28KSC-20240605-PH-RKL01_0005%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "license": "Public domain (NASA)",
+    "artist": "NASA Kennedy Space Center / Rocket Lab",
+    "caption": "Rocket Lab's Electron rocket “PREFIRE and Ice” lifts off from Launch Complex 1 in Māhia, New Zealand.",
+    "bytes": 1664200
+  },
+  {
+    "file": "iridium-satellite.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File%3AIridium_satellite.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Iridium_satellite.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "license": "CC BY-SA 2.0",
+    "artist": "Iridium Communications / Wikimedia Commons",
+    "caption": "An Iridium satellite. Rocket Lab is buying the 66-satellite Iridium network for $8 billion.",
+    "bytes": 998362
+  },
+  {
+    "file": "neutron-render.png",
+    "page": "https://commons.wikimedia.org/wiki/File%3ARocketLab_Neutron.png",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/b1/RocketLab_Neutron.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "license": "CC BY-SA 4.0",
+    "artist": "Rocket Lab / Wikimedia Commons",
+    "caption": "A rendering of Rocket Lab's Neutron, the 43-metre reusable medium-lift rocket meant to fly the Iridium replacement constellation.",
+    "bytes": 467005
+  }
+]
