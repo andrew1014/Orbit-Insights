@@ -1,0 +1,29 @@
+[
+  {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/CRS-9_mission_%2828348649546%29.jpg/1280px-CRS-9_mission_%2828348649546%29.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:CRS-9_mission_(28348649546).jpg",
+    "license": "CC0",
+    "artist": "SpaceX",
+    "file": "falcon9-launch.jpg",
+    "caption": "A Falcon 9 lifts off. SpaceX has now stopped taking commercial rideshare bookings past 2028 as it keeps its rockets for its own Starlink and Starship launches.",
+    "bytes": 132215
+  },
+  {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Racks_Amravati_Data_Center.jpg/1280px-Racks_Amravati_Data_Center.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Racks_Amravati_Data_Center.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Pi Datacenters",
+    "file": "data-center-racks.jpg",
+    "caption": "Server racks inside a commercial data center. In its first quarter as a public company, SpaceX put 86% of its capital spending into semiconductors and data centers.",
+    "bytes": 404018
+  },
+  {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Nasdaq_Tower_May_2026.jpg/1280px-Nasdaq_Tower_May_2026.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Nasdaq_Tower_May_2026.jpg",
+    "license": "CC BY 4.0",
+    "artist": "Nielsoncaetanosalmeron",
+    "file": "nasdaq-tower.jpg",
+    "caption": "The Nasdaq MarketSite tower in Times Square. SpaceX listed on the Nasdaq as SPCX on June 12, 2026 — the largest IPO in history.",
+    "bytes": 729892
+  }
+]
